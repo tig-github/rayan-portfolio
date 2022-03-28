@@ -1,0 +1,181 @@
+/* general */
+
+@font-face {
+  font-family: "Round";
+  src: url("../fonts/rounded_elegance/Rounded_Elegance.ttf") format('truetype')
+}
+
+:root {
+  --background: url("day.jpg");
+  --text-color: black;
+  --section-color: rgb(173, 255, 201);
+  --link-color: blue;
+  --link-visited: purple;
+  --loading-color: rgb(205, 184, 243);
+}
+
+
+html {
+  font-family: "Round", sans-serif;
+  background-image: var(--background);
+  /*night option to be added with javascript as nightmode, need
+    picture that is less blurry for day*/
+  /*nightmode articles can be purple, daymode can be green*/
+  background-repeat: no-repeat; 
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: var(--loading-color);
+  color: var(--text-color);
+  transition: background-color 500ms, color 500ms;
+  /*https://www.webfx.com/blog/web-design/responsive-background-image/ */
+}
+
+a {
+  color: var(--link-color);
+}
+
+a:visited {
+  color: var(--link-visited);
+}
+
+/* layout */
+
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+button {
+  font-size: 1.5rem;
+  background: transparent;
+  border: 0px solid transparent;
+  padding: 0px;
+  cursor: pointer;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+section:not(.tables) article{
+  background-color:var(--section-color);
+  border:rgb(89, 89, 89) solid;
+  margin: 15px;
+  padding: 10px;
+  padding-top: 5px;
+}
+
+article {
+  width: 75%;
+}
+
+article h2 {
+  display: flex;
+  justify-content: center;
+}
+
+p.topper {
+  text-align: center;
+}
+
+
+h3.center {
+  text-align: center;
+}
+
+
+/* table */
+
+:root {
+  --table-side-color: rgb(173, 255, 201);
+  --table-row-light: rgb(191, 234, 255);
+  --table-row-dark: rgb(190, 222, 255);
+}
+
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(0,0,0);
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+}
+
+td, th {
+  border: 1px solid rgb(0,0,0);
+  padding: 10px 20px;
+}
+
+th {
+  background-color: var(--table-side-color);
+  /*rgb(204, 102, 255);*/
+}
+
+td {
+  text-align: center;
+}
+
+tr.category{
+  border: 3px solid black;
+}
+
+tr:nth-child(even) td {
+  background-color: var(--table-row-light);
+}
+
+tr:nth-child(odd) td {
+  background-color: var(--table-row-dark)
+}
+
+caption {
+  padding: 10px;
+}
+
+/* navbar and header*/
+
+
+nav ul {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  justify-items: center;
+  margin-bottom: 2.5em;
+  grid-gap: 1em;
+}
+
+nav li {
+  list-style-type: none;
+}
+
+nav li a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 1rem;
+  margin-right: 45px;
+  border:rgb(89, 89, 89) solid;
+  color: var(--text-color);
+  background-color: var(--section-color);
+}
+
+nav li a:visited {
+  color: var(--text-color);
+}
+
+
+nav li a:hover {
+  color: rgb(89, 89, 89);
+  background-color: rgb(223, 223, 255);
+}
+
+
+header h1 {
+  font-size: 2.5em;
+}
