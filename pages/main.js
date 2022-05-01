@@ -1,15 +1,15 @@
-
+//cookies are not supported with github pages, so for now alternatives needed
 let darkmode = false;
 
 
 function DarkMode() {
-    var darkbutton = document.getElementById("darkbutton");
-    var all = document.getElementsByTagName("*");
+    let darkbutton = document.getElementById("darkbutton");
+    let all = document.getElementsByTagName("*");
 
 
     if (darkmode){
         //set it to light
-        document.documentElement.style.setProperty("--background", "url(day.jpg)");
+        document.documentElement.style.setProperty("--background", "url(../images/day.jpg)");
         document.documentElement.style.setProperty("--text-color", "black");
         document.documentElement.style.setProperty("--section-color", "rgb(173, 255, 201)");
         document.documentElement.style.setProperty("--loading-color", "navy");
@@ -27,7 +27,7 @@ function DarkMode() {
     }
     else {
         //set it to dark
-        document.documentElement.style.setProperty("--background", "url(night.jpg)");
+        document.documentElement.style.setProperty("--background", "url(../images/night.jpg)");
         document.documentElement.style.setProperty("--text-color", "white");
         document.documentElement.style.setProperty("--section-color", "rgb(81, 13, 116)");
         document.documentElement.style.setProperty("--loading-color", "rgb(30, 0, 85)");
