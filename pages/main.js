@@ -1,3 +1,4 @@
+//On startup, save localstorage of current state
 function initialize(){
     let darkmode = true;
     localStorage.setItem('bool', true);
@@ -25,7 +26,6 @@ function startUp() {
         document.documentElement.style.setProperty("--link-visited", "purple");
 
         darkbutton.textContent = "🌑";
-        //document.cookie = "darkmode=false"; add cookies once hosted
     }
     else {
         //set it to dark
@@ -42,7 +42,6 @@ function startUp() {
         document.documentElement.style.setProperty("--link-visited", "rgb(155, 155, 70)");
 
         darkbutton.textContent = "☀️";
-        //document.cookie = "darkmode=true"; add cookies once hosted
     }
 }
 
@@ -51,7 +50,6 @@ function DarkMode() {
     var darkbutton = document.getElementById("darkbutton");
     var all = document.getElementsByTagName("*");
 
-    //let key = Object.keys(localStorage)
     darkmode = localStorage.getItem('bool');
     if (darkmode === 'false'){
         //set it to light
