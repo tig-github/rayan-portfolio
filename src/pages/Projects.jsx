@@ -1,7 +1,6 @@
 import React from "react";
 import { Box, Text, Stack, Heading, Container } from "@chakra-ui/react";
 import BoxField from "../components/BoxField";
-import testImage from "../images/uzi.PNG";
 import personalImage from "../images/personal.PNG";
 import courseImage from "../images/coursework.PNG";
 import socialImage from "../images/social.jpeg";
@@ -14,6 +13,11 @@ const courseText =
   "These are the various projects I have built during my time at UCI, many of which in dedicated project courses on specialized topics.";
 const volunteerText =
   "These are projects I have contributed to as part of the organization Commit the Change for non profit organizations.";
+
+const socialItems = {
+  "Patriots and Paws": "This is for patriots and paws",
+  "Abound Food Care": "This is for abound food care",
+};
 
 const Projects = () => {
   return (
@@ -36,6 +40,8 @@ const Projects = () => {
           text={volunteerText}
           header={"Social Good"}
           image={socialImage}
+          listItems={socialItems}
+          listLink={"https://github.com/ctc-uci/patriots-and-paws-frontend"}
         ></BoxField>
         <Container></Container>
       </Stack>

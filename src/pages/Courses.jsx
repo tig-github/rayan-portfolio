@@ -94,19 +94,19 @@ const Courses = () => {
           </TabList>
           <TabPanels w="100%">
             <TabPanel>
-              <ListField items={cs12x} />
+              <ListField items={cs12x} mh="16rem" />
             </TabPanel>
             <TabPanel>
-              <ListField items={cs14x} />
+              <ListField items={cs14x} mh="16rem" />
             </TabPanel>
             <TabPanel>
-              <ListField items={cs16x} />
+              <ListField items={cs16x} mh="16rem" />
             </TabPanel>
             <TabPanel>
-              <ListField items={cs17x} />
+              <ListField items={cs17x} mh="16rem" />
             </TabPanel>
             <TabPanel>
-              <ListField items={csPlannedCourses} />
+              <ListField items={csPlannedCourses} mh="16rem" />
             </TabPanel>
           </TabPanels>
         </Tabs>
@@ -121,10 +121,10 @@ const Courses = () => {
           </TabList>
           <TabPanels w="100%">
             <TabPanel>
-              <ListField items={inf10x} />
+              <ListField items={inf10x} mh="16rem" />
             </TabPanel>
             <TabPanel>
-              <ListField items={infPlannedCourses} />
+              <ListField items={infPlannedCourses} mh="16rem" />
             </TabPanel>
           </TabPanels>
         </Tabs>
