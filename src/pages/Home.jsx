@@ -1,13 +1,14 @@
 import React from "react";
-import { Box, Text } from "@chakra-ui/react";
-import ListField from "../components/ListField";
+import { Box, Text, Heading, Stack } from "@chakra-ui/react";
 
 const Home = () => {
-  const obj = { name1: "description1" };
   return (
     <Box bg="#2C1B47" w="100%" h="calc(100vh)">
-      <Text color="white">lol</Text>
-      <ListField items={obj} />
+      <Stack align="center" spacing={10}>
+        <Heading as="h1" mt="2rem" mb="2rem">
+          <Text color="white">Welcome</Text>
+        </Heading>
+      </Stack>
     </Box>
   );
 };

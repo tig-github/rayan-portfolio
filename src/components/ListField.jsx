@@ -15,16 +15,16 @@ import {
 
 // items is an object {name1: description1 ... namen: descriptionn}
 // optionally includes tablist
-const ListField = (items) => {
+const ListField = ({ items }) => {
   return (
     <Box bg="#DCCAE9">
       <List spacing={4} pt="1rem" pl="1rem" pb="1rem" pr="1rem">
-        {Object.keys(items["items"]).map((k) => {
+        {Object.keys(items).map((k) => {
           return (
-            <ListItem>
+            <ListItem key={Math.random()}>
               <Stack direction="column">
                 <Heading size="sm">{k}</Heading>
-                <Text w="100%"> {items["items"][k]} </Text>
+                <Text w="100%"> {items[k]} </Text>
               </Stack>
             </ListItem>
           );

@@ -23,6 +23,11 @@ const Navbar = () => {
                 Courses
               </Button>
             </Link>
+            <Link as={RouterLink} to="/blog">
+              <Button colorScheme="blackAlpha" size="lg">
+                Blog
+              </Button>
+            </Link>
           </ButtonGroup>
           <Spacer />
           <Link as={RouterLink} to="/focus">

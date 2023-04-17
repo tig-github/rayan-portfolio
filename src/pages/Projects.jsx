@@ -2,6 +2,9 @@ import React from "react";
 import { Box, Text, Stack, Heading, Container } from "@chakra-ui/react";
 import BoxField from "../components/BoxField";
 import testImage from "../images/uzi.PNG";
+import personalImage from "../images/personal.PNG";
+import courseImage from "../images/coursework.PNG";
+import socialImage from "../images/social.jpeg";
 
 const testText =
   "this is testing text for a boxfield. ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ ABCDEFGHIJKLMNOPQRSTUVWXYZ ABCDEFGHIJKLMNOPQRSTUVWXYZ ABCDEFGHIJKLMNOPQRSTUVWXYZ ABCDEFGHIJKLMNOPQRSTUVWXYZ ABCDEFGHIJKLMNOPQRSTUVWXYZ ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -22,17 +25,17 @@ const Projects = () => {
         <BoxField
           text={personalText}
           header={"Personal"}
-          image={testImage}
+          image={personalImage}
         ></BoxField>
         <BoxField
           text={courseText}
           header={"Coursework"}
-          image={testImage}
+          image={courseImage}
         ></BoxField>
         <BoxField
           text={volunteerText}
           header={"Social Good"}
-          image={testImage}
+          image={socialImage}
         ></BoxField>
         <Container></Container>
       </Stack>

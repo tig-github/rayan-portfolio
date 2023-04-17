@@ -22,7 +22,11 @@ const BoxField = ({ text, header, image }) => {
           <Heading>{header}</Heading>
           <Text mt="1rem">{text}</Text>
         </Stack>
-        <Container>{image && <Image ml="15rem" src={image}></Image>}</Container>
+        <Container>
+          {image && (
+            <Image ml="15rem" boxSize="20rem" fit="cover" src={image}></Image>
+          )}
+        </Container>
       </Flex>
     </Box>
   );
