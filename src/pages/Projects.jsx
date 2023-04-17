@@ -17,6 +17,12 @@ const volunteerText =
 const socialItems = {
   "Patriots and Paws": "This is for patriots and paws",
   "Abound Food Care": "This is for abound food care",
+  "Women's Safety Website": "This is for women's safety website",
+};
+const socialLinks = {
+  "Patriots and Paws": "https://github.com/ctc-uci/patriots-and-paws-frontend",
+  "Abound Food Care": "https://github.com/ctc-uci/abound-food-care-frontend",
+  "Women's Safety Website": "https://github.com/ctc-uci/bp-women-safety",
 };
 
 const Projects = () => {
@@ -41,7 +47,7 @@ const Projects = () => {
           header={"Social Good"}
           image={socialImage}
           listItems={socialItems}
-          listLink={"https://github.com/ctc-uci/patriots-and-paws-frontend"}
+          listLinks={socialLinks}
         ></BoxField>
         <Container></Container>
       </Stack>

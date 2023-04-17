@@ -17,8 +17,8 @@ import {
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 
 // items is an object {name1: description1 ... namen: descriptionn}
-// optionally includes tablist
-const ListField = ({ items, mh, link }) => {
+// links is an object {name1: link1 ... namen: linkn} that must have matching names with items
+const ListField = ({ items, mh, links }) => {
   return (
     <Box bg="#DCCAE9" minHeight={mh}>
       <List spacing={4} p="1rem">
@@ -28,9 +28,9 @@ const ListField = ({ items, mh, link }) => {
               <Stack direction="column">
                 <HStack>
                   <Heading size="sm">{k}</Heading>
-                  {link && (
+                  {links && (
                     <>
-                      <Link href={link} isExternal>
+                      <Link href={links[k]} isExternal>
                         <ExternalLinkIcon mx="2px" mb=".2rem" />
                       </Link>
                     </>

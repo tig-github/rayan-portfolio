@@ -16,7 +16,7 @@ import {
 import ListField from "./ListField";
 
 // listItems by default null
-const BoxField = ({ text, header, image, listItems, listLink }) => {
+const BoxField = ({ text, header, image, listItems, listLinks }) => {
   return (
     <Box bg="#DCCAE9" ml=".5rem" mb="2rem" mt="2rem" w="100%">
       <Flex w="100%">
@@ -24,7 +24,7 @@ const BoxField = ({ text, header, image, listItems, listLink }) => {
           <Heading>{header}</Heading>
           <Text mt="1rem">{text}</Text>
           {listItems && (
-            <ListField items={listItems} mh={"0rem"} link={listLink} />
+            <ListField items={listItems} mh={"0rem"} links={listLinks} />
           )}
         </Stack>
         <Container h="100%">
