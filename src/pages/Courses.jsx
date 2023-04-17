@@ -74,8 +74,8 @@ const Courses = () => {
           following are the upper division courses I have taken, and the ones I
           plan to take.
         </Text>
-        <Tabs>
-          <TabList>
+        <Tabs w="100%">
+          <TabList mt="4rem" align="center">
             <Tab>
               <Text color="white">12X Information</Text>
             </Tab>
@@ -92,7 +92,7 @@ const Courses = () => {
               <Text color="white"> Planned Courses </Text>
             </Tab>
           </TabList>
-          <TabPanels>
+          <TabPanels w="100%">
             <TabPanel>
               <ListField items={cs12x} />
             </TabPanel>
@@ -110,7 +110,7 @@ const Courses = () => {
             </TabPanel>
           </TabPanels>
         </Tabs>
-        <Tabs>
+        <Tabs w="100%">
           <TabList>
             <Tab>
               <Text color="white">10X Programming Languages</Text>
@@ -119,7 +119,7 @@ const Courses = () => {
               <Text color="white">Planned Courses</Text>
             </Tab>
           </TabList>
-          <TabPanels>
+          <TabPanels w="100%">
             <TabPanel>
               <ListField items={inf10x} />
             </TabPanel>

@@ -9,6 +9,7 @@ const Blog = () => {
           <Heading as="h1" mt="2rem" mb="2rem">
             <Text color="white">Blog</Text>
           </Heading>
+          <Text color="white">Under Construction</Text>
         </Stack>
       </Box>
     </>

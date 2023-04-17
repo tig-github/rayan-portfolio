@@ -17,7 +17,7 @@ import {
 // optionally includes tablist
 const ListField = ({ items }) => {
   return (
-    <Box bg="#DCCAE9">
+    <Box bg="#DCCAE9" minHeight="16rem">
       <List spacing={4} pt="1rem" pl="1rem" pb="1rem" pr="1rem">
         {Object.keys(items).map((k) => {
           return (

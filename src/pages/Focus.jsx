@@ -8,7 +8,8 @@ const Focus = () => {
         <Stack align="center" spacing={10}>
           <Heading as="h1" mt="2rem" mb="2rem">
             <Text color="white">Focus</Text>
-          </Heading>{" "}
+          </Heading>
+          <Text color="white">Under Construction</Text>
         </Stack>
       </Box>
     </>
