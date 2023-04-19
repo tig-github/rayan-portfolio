@@ -20,7 +20,7 @@ const BoxField = ({ text, header, image, listItems, listLinks }) => {
   return (
     <Box bg="#DCCAE9" ml=".5rem" mb="2rem" mt="2rem" w="100%">
       <Flex w="100%">
-        <Stack w="50%" ml="5.5rem" mt="2rem">
+        <Stack w="70%" ml="5.5rem" mt="2rem">
           <Heading>{header}</Heading>
           <Text mt="1rem">{text}</Text>
           {listItems && (
@@ -29,7 +29,13 @@ const BoxField = ({ text, header, image, listItems, listLinks }) => {
         </Stack>
         <Container h="100%">
           {image && (
-            <Image ml="15rem" boxSize="20rem" fit="cover" src={image}></Image>
+            <Image
+              ml="7rem"
+              my="5rem"
+              boxSize="20rem"
+              fit="cover"
+              src={image}
+            ></Image>
           )}
         </Container>
       </Flex>

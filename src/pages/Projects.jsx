@@ -53,7 +53,7 @@ const Projects = () => {
   return (
     <Box bg="#2C1B47" w="100%" h="100%">
       <Stack align="center" spacing={10}>
-        <Heading sz="md" mt="2rem" mb="2rem">
+        <Heading sz="md" mt="2rem" mb="4rem">
           <Text color="white">Projects</Text>
         </Heading>
         <BoxField
