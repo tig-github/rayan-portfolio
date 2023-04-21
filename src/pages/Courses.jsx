@@ -14,7 +14,6 @@ import ListField from "../components/ListField";
 
 const Courses = () => {
   const cs12x = {
-    //placeholder descriptions
     "121 Information Retrieval":
       "Course covering key areas of information retrieval including indexing, scoring algorithms, retrieval, search engine architecture, etc. Built a fully functioning search engine on a team of four under harsh operational constraints.",
     "122A Intro to Data Management":
@@ -75,6 +74,7 @@ const Courses = () => {
     "INF 131 Human Computer Interaction":
       "A course discussing more design would probably do a lot of good for this website.",
   };
+
   return (
     <Box bg="#2C1B47" w="100%" h="100%">
       <Stack align="center" spacing={8}>

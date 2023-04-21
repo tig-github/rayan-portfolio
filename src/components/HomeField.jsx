@@ -1,3 +1,6 @@
+/*
+Large box that has an image oriented to right, specialized for homefield
+*/
 import React from "react";
 import {
   Box,

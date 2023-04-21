@@ -1,10 +1,9 @@
 import React from "react";
 import { Box, Container, Text, Stack, Heading } from "@chakra-ui/react";
 import BlogField from "../components/BlogField";
-import testImage from "../images/uzi.PNG";
-import blogImage from "../images/blog.jpeg";
+import blog0Image from "../images/blog.jpeg";
 
-const blog1Text =
+const blog0Text =
   "Hello, welcome to this blog. Here I'll post about various tech or music related things on my mind. In the future if I post here a lot I'll add some more features to make it a more fleshed out section of the site. For now I'll just be displaying posts here.";
 
 const Blog = () => {
@@ -16,9 +15,9 @@ const Blog = () => {
             <Text color="white">Blog</Text>
           </Heading>
           <BlogField
-            text={blog1Text}
+            text={blog0Text}
             header={"Hello there 👋"}
-            image={blogImage}
+            image={blog0Image}
           />
           <Container></Container>
         </Stack>

@@ -1,18 +1,8 @@
 /*
-Large box that has an image oriented to right
+Large box that has an image oriented right above text
 */
 import React from "react";
-import {
-  Stack,
-  HStack,
-  Box,
-  Container,
-  Text,
-  Image,
-  Flex,
-  Spacer,
-  Heading,
-} from "@chakra-ui/react";
+import { Stack, Box, Container, Text, Image, Heading } from "@chakra-ui/react";
 
 const BlogField = ({ text, header, image }) => {
   return (
