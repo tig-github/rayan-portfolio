@@ -21,7 +21,9 @@ const BlogField = ({ text, header, image }) => {
         <Heading>
           <Text>{header}</Text>
         </Heading>
-        <Image src={image} boxSize="30rem"></Image>
+        <Container w="100%" h="100%">
+          <Image src={image} fit="covers"></Image>
+        </Container>
         <Text align="center">{text}</Text>
       </Stack>
     </Box>
