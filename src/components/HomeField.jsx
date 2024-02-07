@@ -18,7 +18,7 @@ const HomeField = () => {
     <>
       <Box bg="#DCCAE9" ml=".5rem" mb="2rem" pb="2rem" mt="2rem" w="100%">
         <Stack align="center" mt="1rem" ml="5.5rem" spacing={5}>
-          <Heading mb="2rem">
+          <Heading mb="2rem" align="center">
             <Text>Hello! My name is Rayan</Text>
           </Heading>
           <Text>
