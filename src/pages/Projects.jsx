@@ -1,6 +1,7 @@
 import React from "react";
-import { Box, Text, Stack, Heading, Container } from "@chakra-ui/react";
-import BoxField from "../components/BoxField";
+import { useState } from "react";
+import { Box, Text, Stack, Heading, Container, Flex, Switch } from "@chakra-ui/react";
+import ProjectCard from "../components/ProjectCard";
 import personalImage from "../images/personal.PNG";
 import courseImage from "../images/coursework.PNG";
 import socialImage from "../images/social.jpeg";
@@ -50,33 +51,46 @@ const socialLinks = {
 };
 
 const Projects = () => {
+  const [personal, setPersonal] = useState(true);
+  const [contributed, setContributed] = useState(true);
   return (
     <Box bg="#2C1B47" w="100%" h="100%">
       <Stack align="center" spacing={10}>
         <Heading sz="md" mt="2rem" mb="4rem">
           <Text color="white">Projects</Text>
         </Heading>
-        <BoxField
-          text={personalText}
-          header={"Personal"}
-          image={personalImage}
-          listItems={personalItems}
-          listLinks={personalLinks}
-        ></BoxField>
-        <BoxField
-          text={courseText}
-          header={"Coursework"}
-          image={courseImage}
-          listItems={courseItems}
-        ></BoxField>
-        <BoxField
-          text={volunteerText}
-          header={"Social Good"}
-          image={socialImage}
-          listItems={socialItems}
-          listLinks={socialLinks}
-        ></BoxField>
-        <Container></Container>
+        <Flex gap={20}>
+            <Flex gap={3}>
+              <Text fontSize="2xl" fontWeight="600" color="white"> Show Personal Projects</Text>
+              <Switch onChange={() => {setPersonal(!personal)}} colorScheme="purple" mt={3}/>
+            </Flex>
+            <Flex gap={3}>
+              <Text fontSize="2xl" fontWeight="600" color="white"> Show Open Source Contributions</Text>
+              <Switch onChange={() => {setContributed(!contributed)}} colorScheme="purple" mt={3}/>
+            </Flex>
+        </Flex>
+        <Flex gap={20} wrap="wrap" justify="center" w="100%">
+          {
+            personal && 
+            <>
+              <ProjectCard title={"Yazify"} img={personalImage} tag={"Personal"} description={"Test"}/>
+              <ProjectCard title={"GreedyAnts"} img={personalImage} tag={"Hackathon"} description={"Test"}/>
+            </>
+          }
+          {
+            contributed &&
+            <>
+              <ProjectCard title={"Patriots and Paws"} img={personalImage} tag={"CTC"} description={"Test"}/>
+              <ProjectCard title={"Stand Up To Trash"} img={personalImage} tag={"CTC"} description={"Test"}/>
+              <ProjectCard title={"Women's Safety Website"} img={personalImage} description={"CTC"}/>
+            </>
+
+          }
+
+          <ProjectCard title={"Yazify"} img={personalImage} description={"Test"}/>
+        </Flex>
+
+
       </Stack>
     </Box>
   );
