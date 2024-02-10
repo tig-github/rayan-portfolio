@@ -2,18 +2,10 @@ import React from "react";
 import { useState } from "react";
 import { Box, Text, Stack, Heading, Container, Flex, Switch } from "@chakra-ui/react";
 import ProjectCard from "../components/ProjectCard";
-import personalImage from "../images/personal.PNG";
-import courseImage from "../images/coursework.PNG";
-import socialImage from "../images/social.jpeg";
+import yazifyImage from "../images/personal.PNG";
+import algoImage from "../images/coursework.PNG";
+import personalImage from "../images/social.jpeg";
 
-const testText =
-  "this is testing text for a boxfield. ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ ABCDEFGHIJKLMNOPQRSTUVWXYZ ABCDEFGHIJKLMNOPQRSTUVWXYZ ABCDEFGHIJKLMNOPQRSTUVWXYZ ABCDEFGHIJKLMNOPQRSTUVWXYZ ABCDEFGHIJKLMNOPQRSTUVWXYZ ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-const personalText =
-  "These are personal projects I have created on my own time, generally to get a greater understanding of an area of Computer Science or build something interesting. Examples include this website, the data structures mini projects, and more.";
-const courseText =
-  "These are the various projects I have built during my time at UCI, many of which in dedicated project courses on specialized topics. Unfortunately most of the repositories must be kept private so the code itself does not spread, but the following are projects I have worked on.";
-const volunteerText =
-  "These are projects I have contributed to as part of the organization Commit the Change for non profit organizations.";
 
 const personalItems = {
   Yazify:
@@ -22,11 +14,6 @@ const personalItems = {
     "This is a series of small projects that I work on whenever I want to do something interesting with a particular data structure or algorithm. Currently I implemented a Turing Machine in Python with a self implemented Linked List, and am working on a Persistent RedBlack Tree in C++ for point location, along with a small Computational Geometry library.",
   GreedyAnts:
     "For HackUCI 2022, built when my team and I had no web development experience.",
-};
-const personalLinks = {
-  Yazify: "https://github.com/tig-github/yazify",
-  "DSA Mini Projects": "https://github.com/tig-github/DSA_miniprojects",
-  GreedyAnts: "https://github.com/tig-github/GreedyAnts",
 };
 
 const courseItems = {
@@ -53,44 +40,55 @@ const socialLinks = {
 const Projects = () => {
   const [personal, setPersonal] = useState(true);
   const [contributed, setContributed] = useState(true);
+  const [school, setSchool] = useState(true);
   return (
-    <Box bg="#2C1B47" w="100%" h="100%">
+    <Box bg="#2C1B47" w="100%" minH="100vh" h="100%">
       <Stack align="center" spacing={10}>
         <Heading sz="md" mt="2rem" mb="4rem">
           <Text color="white">Projects</Text>
         </Heading>
-        <Flex gap={20}>
+        <Flex gap={20} mb={3}>
             <Flex gap={3}>
               <Text fontSize="2xl" fontWeight="600" color="white"> Show Personal Projects</Text>
-              <Switch onChange={() => {setPersonal(!personal)}} colorScheme="purple" mt={3}/>
+              <Switch onChange={() => {setPersonal(!personal)}} colorScheme="purple" mt={3} defaultChecked/>
             </Flex>
             <Flex gap={3}>
               <Text fontSize="2xl" fontWeight="600" color="white"> Show Open Source Contributions</Text>
-              <Switch onChange={() => {setContributed(!contributed)}} colorScheme="purple" mt={3}/>
+              <Switch onChange={() => {setContributed(!contributed)}} colorScheme="purple" mt={3} defaultChecked/>
             </Flex>
         </Flex>
-        <Flex gap={20} wrap="wrap" justify="center" w="100%">
+        <Flex gap={3}>
+              <Text fontSize="2xl" fontWeight="600" color="white"> Show School Projects</Text>
+              <Switch onChange={() => {setSchool(!school)}} colorScheme="purple" mt={3} defaultChecked/>
+        </Flex>
+        <Box />
+        <Flex gap={20} wrap="wrap" justify="center" w="80%">
           {
             personal && 
             <>
-              <ProjectCard title={"Yazify"} img={personalImage} tag={"Personal"} description={"Test"}/>
-              <ProjectCard title={"GreedyAnts"} img={personalImage} tag={"Hackathon"} description={"Test"}/>
+              <ProjectCard title={"Yazify"} img={yazifyImage} tag={"Personal"} link={"https://github.com/tig-github/yazify"} description={"Test"}/>
+              <ProjectCard title={"Algorithms Notebook"} img={algoImage} tag={"Personal"} link={"https://github.com/tig-github/cs16x-algorithms-notebook"} description={"Test"}/>
+              <ProjectCard title={"GreedyAnts"} img={personalImage} tag={"Hackathon"} link={"https://github.com/tig-github/GreedyAnts"} description={"Test"}/>
             </>
           }
           {
             contributed &&
             <>
-              <ProjectCard title={"Patriots and Paws"} img={personalImage} tag={"CTC"} description={"Test"}/>
-              <ProjectCard title={"Stand Up To Trash"} img={personalImage} tag={"CTC"} description={"Test"}/>
-              <ProjectCard title={"Women's Safety Website"} img={personalImage} description={"CTC"}/>
+              <ProjectCard title={"Patriots and Paws"} img={personalImage} tag={"CTC"} link={"https://github.com/ctc-uci/patriots-and-paws-frontend"} description={"Test"}/>
+              <ProjectCard title={"Stand Up To Trash"} img={personalImage} tag={"CTC"} link={"https://github.com/ctc-uci/stand-up-to-trash-frontend"} description={"Test"}/>
+              <ProjectCard title={"Women's Safety Website"} img={personalImage}  tag={"CTC"} link={"https://github.com/ctc-uci/bp-women-safety"} description={"Test"}/>
             </>
 
           }
-
-          <ProjectCard title={"Yazify"} img={personalImage} description={"Test"}/>
+          {
+            school &&
+            <>
+              <ProjectCard title={"CS 117 Teapot Model"} img={personalImage} tag={"School"} description={"Test"} isSchool/>
+              <ProjectCard title={"CS 121 Search Engine"} img={personalImage} tag={"School"} description={"Test"} isSchool/>
+            </>
+          }
         </Flex>
-
-
+        <Box mb={2}></Box>
       </Stack>
     </Box>
   );

@@ -16,30 +16,37 @@ import {
   CardBody, 
   CardFooter,
   Icon,
-  Button
+  Link 
   
 } from "@chakra-ui/react";
 import { AiFillGithub } from "react-icons/ai";
 
-const ProjectCard = ({title, img, tag, description}) => {
+const ProjectCard = ({title, img, tag, link, description, isSchool}) => {
     return (
-        <Card w="18rem" h="100%" bg="#7f59bb">
-            <CardHeader>
+        <Card w="20rem" maxH="40rem" bg="#7f59bb">
+            <CardHeader maxH="6rem">
                 <Center>
-                    <Text>{title}</Text>
+                    <Text fontSize="2xl" fontWeight="bold" align="center">{title}</Text>
                 </Center>
-                <Center>
-                    <Text>{tag} Project</Text>
-                </Center>
+
             </CardHeader>
             <CardBody>
-                <Image src={img}></Image>
-                <Flex justify="center">
-                    <Button onClick={() => {alert("lol")}} variant="unstyled">
-                        <AiFillGithub size={40} />
-                    </Button>
+                <Center>
+                    <Image src={img} boxSize={250}></Image>
+                </Center>
+                <Flex justify="center" mt={2}>
+                {
+                !isSchool &&
+                        <Link href={link} isExternal mr={3}>
+                            <AiFillGithub size={40} />
+                        </Link>
+                }
+                <Center>
+                    <Text >{tag} Project</Text>
+                </Center>
                 </Flex>
-                <Text>{description}</Text>
+
+                <Text mt={4}>{description}</Text>
             </CardBody>
             <CardFooter>
             </CardFooter>
