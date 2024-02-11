@@ -5,7 +5,8 @@ import ProjectCard from "../components/ProjectCard";
 import yazifyImage from "../images/personal.PNG";
 import algoImage from "../images/coursework.PNG";
 import personalImage from "../images/social.jpeg";
-
+import ctcDefaultImage from "../images/CTC.png"
+import icsscDefaultImage from "../images/icssc.svg";
 
 const personalItems = {
   Yazify:
@@ -74,9 +75,10 @@ const Projects = () => {
           {
             contributed &&
             <>
-              <ProjectCard title={"Patriots and Paws"} img={personalImage} tag={"CTC"} link={"https://github.com/ctc-uci/patriots-and-paws-frontend"} description={"Test"}/>
-              <ProjectCard title={"Stand Up To Trash"} img={personalImage} tag={"CTC"} link={"https://github.com/ctc-uci/stand-up-to-trash-frontend"} description={"Test"}/>
-              <ProjectCard title={"Women's Safety Website"} img={personalImage}  tag={"CTC"} link={"https://github.com/ctc-uci/bp-women-safety"} description={"Test"}/>
+              <ProjectCard title={"Patriots and Paws"} img={ctcDefaultImage} tag={"CTC"} link={"https://github.com/ctc-uci/patriots-and-paws-frontend"} description={"Test"}/>
+              <ProjectCard title={"Stand Up To Trash"} img={ctcDefaultImage} tag={"CTC"} link={"https://github.com/ctc-uci/stand-up-to-trash-frontend"} description={"Test"}/>
+              <ProjectCard title={"AntAlmanac"} img={icsscDefaultImage} tag={"ICSSC"} link={"https://github.com/ctc-uci/patriots-and-paws-frontend"} description={"Test"}/>
+              <ProjectCard title={"Women's Safety Website"} img={ctcDefaultImage}  tag={"CTC"} link={"https://github.com/ctc-uci/bp-women-safety"} description={"Test"}/>
             </>
 
           }
