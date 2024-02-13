@@ -11,28 +11,32 @@ import {
   Heading,
   Image,
 } from "@chakra-ui/react";
-import commit from "../images/commit.PNG";
+import me from "../images/rayan.png";
 
 const HomeField = () => {
   return (
     <>
-      <Box bg="#DCCAE9" ml=".5rem" mb="2rem" pb="2rem" mt="2rem" w="100%">
-        <Stack align="center" mt="1rem" ml="5.5rem" spacing={5}>
+      <Box bg="#DCCAE9" borderRadius="1rem" w="30%" h="100%" pb={5} pl={5} pr={5}>
+        <Stack align="left" mt="1rem" spacing={5}>
           <Heading mb="2rem" align="center">
             <Text>Hello! My name is Rayan</Text>
           </Heading>
-          <Text>
-            I am currently a Computer Science student at the University of
-            California, Irvine
-          </Text>
-          <Text>I am passionate about Music, History, and Software.</Text>
-          <Text>
-            I like learning about Algorithms, Programming Languages, and more.
-          </Text>
-          <Text>
-            Portfolio Todo: 3d Yaz with Threejs, display github commit history
-            right here.
-          </Text>
+              <Text>
+                I am currently a Computer Science student at the University of
+                California, Irvine
+              </Text>
+              <Text>I am passionate about Music, History, and Software.</Text>
+              <Text>
+                I like learning about Algorithms, Programming Languages, and more.
+              </Text>
+              <Text>
+                Currently I am studying Quantum Computing and Graph Algorithms.
+              </Text>
+              <Text>
+                Currently I am working on several personal projects, 
+                AntAlmanac, a project for a local nonprofit, and an AI chatbot to
+                query a startup's database using natural language.
+              </Text>
         </Stack>
       </Box>
     </>

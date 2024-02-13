@@ -1,6 +1,8 @@
 import React from "react";
 import { Box, Flex, Button, ButtonGroup, Link, Spacer } from "@chakra-ui/react";
 import { Link as RouterLink } from "react-router-dom";
+import { AiFillGithub } from "react-icons/ai";
+import { FaLinkedin } from "react-icons/fa";
 
 const Navbar = () => {
   return (
@@ -30,10 +32,13 @@ const Navbar = () => {
             </Link>
           </ButtonGroup>
           <Spacer />
-          <Link as={RouterLink} to="/focus">
-            <Button colorScheme="blackAlpha" size="lg">
-              ⧖
-            </Button>
+          <Link href="https://www.linkedin.com/in/rayantig/" isExternal mr={3}>
+              <FaLinkedin size={40} color="#0072b1"/>
+          </Link>
+          <Link href="https://github.com/tig-github" isExternal>
+            <Box bg="white" borderRadius="full">
+              <AiFillGithub size={40}/>
+            </Box>
           </Link>
         </Flex>
       </Box>

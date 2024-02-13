@@ -5,7 +5,6 @@ import Layout from "./pages/Layout";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import Courses from "./pages/Courses";
-import Focus from "./pages/Focus";
 import Blog from "./pages/Blog";
 
 function App() {
@@ -17,7 +16,6 @@ function App() {
             <Route index element={<Home />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/courses" element={<Courses />} />
-            <Route path="/focus" element={<Focus />} />
             <Route path="/blog" element={<Blog />} />
           </Route>
         </Routes>
