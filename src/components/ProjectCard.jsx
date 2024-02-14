@@ -45,8 +45,9 @@ const ProjectCard = ({title, img, tag, link, description, isSchool}) => {
                     <Text >{tag} Project</Text>
                 </Center>
                 </Flex>
-
-                <Text mt={4}>{description}</Text>
+                <Box overflow="scroll" maxH="38%">
+                    <Text mt={4}>{description}</Text>
+                </Box>
             </CardBody>
             <CardFooter>
             </CardFooter>

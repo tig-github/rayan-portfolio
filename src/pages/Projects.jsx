@@ -15,6 +15,19 @@ const personalItems = {
     "This is a series of small projects that I work on whenever I want to do something interesting with a particular data structure or algorithm. Currently I implemented a Turing Machine in Python with a self implemented Linked List, and am working on a Persistent RedBlack Tree in C++ for point location, along with a small Computational Geometry library.",
   GreedyAnts:
     "For HackUCI 2022, built when my team and I had no web development experience.",
+  Algos:
+  "Notebook where I implement algorithms I learn in a series of courses, with the goal of building a graph algorithm/computational geometry visualzier.",
+};
+
+const socialItems = {
+  "Patriots and Paws":
+    "Fullstack web furniture management system built for the nonprofit Patriots and Paws. Contributed significantly on the frontend and backend with features including pagination, navigation, routing, styling, and more.",
+  "trash":
+  "Fullstack volunteer management system that I am currently contributing to for the nonprofit Stand Up To Trash. Contributed significantly on the frontend and backend with features including the CheckIn page, the Volunteer Events page, ",
+    "Abound Food Care":
+    "I worked on this website as part of a small team during the summer, and helped implement pagination and several frontend features.",
+  "Women's Safety Website":
+    "This was the first website I worked on as part of a small team of five to help provide resources for women on campus. Ultimately the team dissolved before the project could be finished, but I gained valuable experience.",
 };
 
 const courseItems = {
@@ -22,20 +35,6 @@ const courseItems = {
     "This was a fully functioning search engine for CS 121 - Information Retrieval",
   "ICS 51 Wordle in Assembly":
     "A fully functioning game of Wordle built entirely in MIPS assembly",
-};
-
-const socialItems = {
-  "Patriots and Paws":
-    "This is a website I am currently working on as part of the club CTC for the PNP nonprofit in Orange County. I have helped implement several frontend and backend features such as the navbar, SQL DDLs and routes, and pagination. Currently the project is in end stages.",
-  "Abound Food Care":
-    "I worked on this website as part of a small team during the summer, and helped implement pagination and several frontend features.",
-  "Women's Safety Website":
-    "This was the first website I worked on as part of a small team of five to help provide resources for women on campus. Ultimately the team dissolved before the project could be finished, but I gained valuable experience.",
-};
-const socialLinks = {
-  "Patriots and Paws": "https://github.com/ctc-uci/patriots-and-paws-frontend",
-  "Abound Food Care": "https://github.com/ctc-uci/abound-food-care-frontend",
-  "Women's Safety Website": "https://github.com/ctc-uci/bp-women-safety",
 };
 
 const Projects = () => {
@@ -67,18 +66,18 @@ const Projects = () => {
           {
             personal && 
             <>
-              <ProjectCard title={"Yazify"} img={yazifyImage} tag={"Personal"} link={"https://github.com/tig-github/yazify"} description={"Test"}/>
-              <ProjectCard title={"Algorithms Notebook"} img={algoImage} tag={"Personal"} link={"https://github.com/tig-github/cs16x-algorithms-notebook"} description={"Test"}/>
-              <ProjectCard title={"GreedyAnts"} img={personalImage} tag={"Hackathon"} link={"https://github.com/tig-github/GreedyAnts"} description={"Test"}/>
+              <ProjectCard title={"Yazify"} img={yazifyImage} tag={"Personal"} link={"https://github.com/tig-github/yazify"} description={personalItems.Yazify}/>
+              <ProjectCard title={"Algorithms Notebook"} img={algoImage} tag={"Personal"} link={"https://github.com/tig-github/cs16x-algorithms-notebook"} description={personalItems.Algos}/>
+              <ProjectCard title={"GreedyAnts"} img={personalImage} tag={"Hackathon"} link={"https://github.com/tig-github/GreedyAnts"} description={personalItems.GreedyAnts}/>
             </>
           }
           {
             contributed &&
             <>
-              <ProjectCard title={"Patriots and Paws"} img={ctcDefaultImage} tag={"CTC"} link={"https://github.com/ctc-uci/patriots-and-paws-frontend"} description={"Test"}/>
-              <ProjectCard title={"Stand Up To Trash"} img={ctcDefaultImage} tag={"CTC"} link={"https://github.com/ctc-uci/stand-up-to-trash-frontend"} description={"Test"}/>
-              <ProjectCard title={"AntAlmanac"} img={icsscDefaultImage} tag={"ICSSC"} link={"https://github.com/ctc-uci/patriots-and-paws-frontend"} description={"Test"}/>
-              <ProjectCard title={"Women's Safety Website"} img={ctcDefaultImage}  tag={"CTC"} link={"https://github.com/ctc-uci/bp-women-safety"} description={"Test"}/>
+              <ProjectCard title={"Patriots and Paws"} img={ctcDefaultImage} tag={"CTC"} link={"https://github.com/ctc-uci/patriots-and-paws-frontend"} description={socialItems["Patriots and Paws"]}/>
+              <ProjectCard title={"Stand Up To Trash"} img={ctcDefaultImage} tag={"CTC"} link={"https://github.com/ctc-uci/stand-up-to-trash-frontend"} description={socialItems.trash}/>
+              <ProjectCard title={"AntAlmanac"} img={icsscDefaultImage} tag={"ICSSC"} link={"https://github.com/ctc-uci/patriots-and-paws-frontend"} description={socialItems["Abound Food Care"]}/>
+              <ProjectCard title={"Women's Safety Website"} img={ctcDefaultImage}  tag={"CTC"} link={"https://github.com/ctc-uci/bp-women-safety"} description={socialItems["Women's Safety Website"]}/>
             </>
 
           }
