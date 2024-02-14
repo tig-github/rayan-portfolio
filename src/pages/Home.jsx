@@ -7,14 +7,18 @@ import {
   Heading, 
   Stack, 
   Flex,
-  Spacer, 
-  Image 
+  Image,
+  useBreakpointValue
 } from "@chakra-ui/react";
 import HomeField from "../components/HomeField";
-import yaz from "../images/yaz.svg";
 import me from "../images/rayan.jpg";
 
 const Home = () => {
+  const imageSize = {
+    base: 0,
+    md: 10
+  }
+
   return (
     <Box bg="#2C1B47" maxH="100%" minH="calc(100vh)" w="100%">
       <Stack spacing={10}>
@@ -23,8 +27,8 @@ const Home = () => {
             <Text color="white">Welcome</Text>
           </Heading>
         </Center>
-        <Flex justify="center">
-          <Image src={me} boxSize="30%" borderRadius="full" mr={10} />
+        <Flex justify="center" flexWrap="wrap">
+          <Image src={me} boxSize="30%" minW="20rem" borderRadius="full" mr={imageSize} mb={3}/>
           <Flex justify="center" direction="column" width="55%">
             <HomeField />
           </Flex>

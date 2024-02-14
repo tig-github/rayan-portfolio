@@ -8,8 +8,8 @@ const Navbar = () => {
   return (
     <>
       <Box bg="#2C1B47" w="100%" p={4}>
-        <Flex align="left">
-          <ButtonGroup gap="3">
+        <Flex align="left" overflowX="scroll">
+          <ButtonGroup gap={3}>
             <Link as={RouterLink} to="/">
               <Button colorScheme="blackAlpha" size="lg">
                 Home
@@ -32,7 +32,7 @@ const Navbar = () => {
             </Link>
           </ButtonGroup>
           <Spacer />
-          <Link href="https://www.linkedin.com/in/rayantig/" isExternal mr={3}>
+          <Link href="https://www.linkedin.com/in/rayantig/" isExternal mr={3} ml={6}>
               <FaLinkedin size={40} color="#0072b1"/>
           </Link>
           <Link href="https://github.com/tig-github" isExternal>

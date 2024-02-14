@@ -6,12 +6,8 @@ import {
   Box,
   Text,
   Stack,
-  Flex,
-  Spacer,
   Heading,
-  Image,
 } from "@chakra-ui/react";
-import me from "../images/rayan.png";
 
 const HomeField = () => {
   return (

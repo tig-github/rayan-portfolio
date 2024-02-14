@@ -22,7 +22,7 @@ const personalItems = {
 const socialItems = {
   "Patriots and Paws":
     "Fullstack web furniture management system built for the nonprofit Patriots and Paws. Contributed significantly on the frontend and backend with features including pagination, navigation, routing, styling, and more.",
-  "trash":
+  trash:
   "Fullstack volunteer management system that I am currently contributing to for the nonprofit Stand Up To Trash. Contributed significantly on the frontend and backend with features including the CheckIn page, the Volunteer Events page, ",
     "Abound Food Care":
     "I worked on this website as part of a small team during the summer, and helped implement pagination and several frontend features.",
@@ -31,6 +31,8 @@ const socialItems = {
 };
 
 const courseItems = {
+  teapot:
+  "Developed 3D model for teapot based on scans, through process of reconstruction, mesh generation, mesh imporvements, and mesh combination through poisson reconstruction.",
   "CS 121 Search Engine":
     "This was a fully functioning search engine for CS 121 - Information Retrieval",
   "ICS 51 Wordle in Assembly":
@@ -41,6 +43,7 @@ const Projects = () => {
   const [personal, setPersonal] = useState(true);
   const [contributed, setContributed] = useState(true);
   const [school, setSchool] = useState(true);
+
   return (
     <Box bg="#2C1B47" w="100%" minH="100vh" h="100%">
       <Stack align="center" spacing={10}>
@@ -84,8 +87,9 @@ const Projects = () => {
           {
             school &&
             <>
-              <ProjectCard title={"CS 117 Teapot Model"} img={personalImage} tag={"School"} description={"Test"} isSchool/>
-              <ProjectCard title={"CS 121 Search Engine"} img={personalImage} tag={"School"} description={"Test"} isSchool/>
+              <ProjectCard title={"CS 117 Teapot Model"} img={personalImage} tag={"School"} description={courseItems.teapot} isSchool/>
+              <ProjectCard title={"CS 121 Search Engine"} img={personalImage} tag={"School"} description={courseItems["CS 121 Search Engine"]} isSchool/>
+              <ProjectCard title={"ICS 51 Assembly Wordle"} img={personalImage} tag={"School"} description={courseItems["ICS 51 Wordle in Assembly"]} isSchool/>
             </>
           }
         </Flex>
