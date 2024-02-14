@@ -14,10 +14,14 @@ import HomeField from "../components/HomeField";
 import me from "../images/rayan.jpg";
 
 const Home = () => {
-  const imageSize = {
+  const imageSize = useBreakpointValue({
     base: 0,
-    md: 10
-  }
+    md: 10,
+  },
+  {
+    fallback: 'base',
+  },
+  )
 
   return (
     <Box bg="#2C1B47" maxH="100%" minH="calc(100vh)" w="100%">
