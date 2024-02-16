@@ -16,15 +16,17 @@ const personalItems = {
   GreedyAnts:
     "For HackUCI 2022, built when my team and I had no web development experience.",
   Algos:
-  "Notebook where I implement algorithms I learn in a series of courses, with the goal of building a graph algorithm/computational geometry visualzier.",
+    "Notebook where I implement algorithms I learn in a series of courses, with the goal of building a graph algorithm/computational geometry visualzier.",
 };
 
-const socialItems = {
+const OSSItems = {
   "Patriots and Paws":
     "Fullstack web furniture management system built for the nonprofit Patriots and Paws. Contributed significantly on the frontend and backend with features including pagination, navigation, routing, styling, and more.",
   trash:
-  "Fullstack volunteer management system that I am currently contributing to for the nonprofit Stand Up To Trash. Contributed significantly on the frontend and backend with features including the CheckIn page, the Volunteer Events page, ",
-    "Abound Food Care":
+    "Fullstack volunteer management system that I am currently contributing to for the nonprofit Stand Up To Trash. Contributed significantly on the frontend and backend with features including the CheckIn page, the Volunteer Events page, ",
+  antalmanac:
+    "Contributed to AntAlmanac, a course scheduler for UC Irvine students maintained by the ICS Student Council. Currently working on implementing push notifications.",
+  "Abound Food Care":
     "I worked on this website as part of a small team during the summer, and helped implement pagination and several frontend features.",
   "Women's Safety Website":
     "This was the first website I worked on as part of a small team of five to help provide resources for women on campus. Ultimately the team dissolved before the project could be finished, but I gained valuable experience.",
@@ -77,10 +79,11 @@ const Projects = () => {
           {
             contributed &&
             <>
-              <ProjectCard title={"Patriots and Paws"} img={ctcDefaultImage} tag={"CTC"} link={"https://github.com/ctc-uci/patriots-and-paws-frontend"} description={socialItems["Patriots and Paws"]}/>
-              <ProjectCard title={"Stand Up To Trash"} img={ctcDefaultImage} tag={"CTC"} link={"https://github.com/ctc-uci/stand-up-to-trash-frontend"} description={socialItems.trash}/>
-              <ProjectCard title={"AntAlmanac"} img={icsscDefaultImage} tag={"ICSSC"} link={"https://github.com/ctc-uci/patriots-and-paws-frontend"} description={socialItems["Abound Food Care"]}/>
-              <ProjectCard title={"Women's Safety Website"} img={ctcDefaultImage}  tag={"CTC"} link={"https://github.com/ctc-uci/bp-women-safety"} description={socialItems["Women's Safety Website"]}/>
+              <ProjectCard title={"Patriots and Paws"} img={ctcDefaultImage} tag={"CTC"} link={"https://github.com/ctc-uci/patriots-and-paws-frontend"} description={OSSItems["Patriots and Paws"]}/>
+              <ProjectCard title={"Stand Up To Trash"} img={ctcDefaultImage} tag={"CTC"} link={"https://github.com/ctc-uci/stand-up-to-trash-frontend"} description={OSSItems.trash}/>
+              <ProjectCard title={"AntAlmanac"} img={icsscDefaultImage} tag={"ICSSC"} link={"https://github.com/icssc/AntAlmanac"} description={OSSItems.antalmanac}/>
+              <ProjectCard title={"Abound Food Care"} img={ctcDefaultImage} tag={"CTC"} link={"https://github.com/ctc-uci/abound-food-care-frontend"} description={OSSItems["Abound Food Care"]}/>
+              <ProjectCard title={"Women's Safety Website"} img={ctcDefaultImage}  tag={"CTC"} link={"https://github.com/ctc-uci/bp-women-safety"} description={OSSItems["Women's Safety Website"]}/>
             </>
 
           }
