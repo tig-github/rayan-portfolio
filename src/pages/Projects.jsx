@@ -1,6 +1,14 @@
 import React from "react";
 import { useState } from "react";
-import { Box, Text, Stack, Heading, Container, Flex, Switch } from "@chakra-ui/react";
+import { 
+  Box, 
+  Text, 
+  Stack, 
+  Heading, 
+  Flex, 
+  Switch, 
+  useBreakpointValue,
+} from "@chakra-ui/react";
 import ProjectCard from "../components/ProjectCard";
 import yazifyImage from "../images/personal.PNG";
 import algoImage from "../images/coursework.PNG";
@@ -41,10 +49,20 @@ const courseItems = {
     "A fully functioning game of Wordle built entirely in MIPS assembly",
 };
 
+
 const Projects = () => {
   const [personal, setPersonal] = useState(true);
   const [contributed, setContributed] = useState(true);
   const [school, setSchool] = useState(true);
+  const flexDirection = useBreakpointValue(
+    {
+      base: 'column',
+      md: 'row',
+    },
+    {
+      fallback: 'column',
+    },
+  )
 
   return (
     <Box bg="#2C1B47" w="100%" minH="100vh" h="100%">
@@ -52,20 +70,21 @@ const Projects = () => {
         <Heading sz="md" mt="2rem" mb="4rem">
           <Text color="white">Projects</Text>
         </Heading>
-        <Flex gap={20} mb={3}>
-            <Flex gap={3}>
-              <Text fontSize="2xl" fontWeight="600" color="white"> Show Personal Projects</Text>
+        <Flex gap={20} mb={3} direction={flexDirection}>
+            <Flex gap="5%">
+              <Text fontSize="2xl" fontWeight="600" color="white" align="center"> Personal Projects</Text>
               <Switch onChange={() => {setPersonal(!personal)}} colorScheme="purple" mt={3} defaultChecked/>
             </Flex>
-            <Flex gap={3}>
-              <Text fontSize="2xl" fontWeight="600" color="white"> Show Open Source Contributions</Text>
+            <Flex gap="2%">
+              <Text fontSize="2xl" fontWeight="600" color="white" align="center"> OSS Contributions</Text>
               <Switch onChange={() => {setContributed(!contributed)}} colorScheme="purple" mt={3} defaultChecked/>
             </Flex>
-        </Flex>
-        <Flex gap={3}>
-              <Text fontSize="2xl" fontWeight="600" color="white"> Show School Projects</Text>
+            <Flex gap="2%">
+              <Text fontSize="2xl" fontWeight="600" color="white" align="center"> School Projects</Text>
               <Switch onChange={() => {setSchool(!school)}} colorScheme="purple" mt={3} defaultChecked/>
         </Flex>
+        </Flex>
+
         <Box />
         <Flex gap={20} wrap="wrap" justify="center" w="80%">
           {

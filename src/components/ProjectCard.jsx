@@ -15,6 +15,18 @@ import {
   Link 
 } from "@chakra-ui/react";
 import { AiFillGithub } from "react-icons/ai";
+import ctcDefaultImage from "../images/CTC.png"
+import icsscDefaultImage from "../images/icssc.svg";
+import defaultLogo from "../images/yaz.svg";
+import schoolLogo from "../images/uci.png";
+
+const tagImages = {
+    "CTC": ctcDefaultImage,
+    "ICSSC": icsscDefaultImage,
+    "Personal": defaultLogo,
+    "School": schoolLogo,
+    "Hackathon": schoolLogo,
+}
 
 const ProjectCard = ({title, img, tag, link, description, isSchool}) => {
     return (
@@ -39,7 +51,15 @@ const ProjectCard = ({title, img, tag, link, description, isSchool}) => {
                     <Text >{tag} Project</Text>
                 </Center>
                 </Flex>
-                <Box overflow="scroll" maxH="30%">
+                <Box 
+                overflowY="scroll" 
+                overflowX="hidden" 
+                sx={
+                    { 
+                    '::-webkit-scrollbar':{display:'none'}
+                    }
+                } 
+                maxH="30%">
                     <Text mt={4}>{description}</Text>
                 </Box>
             </CardBody>

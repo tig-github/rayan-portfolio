@@ -8,7 +8,16 @@ const Navbar = () => {
   return (
     <>
       <Box bg="#2C1B47" w="100%" p={4}>
-        <Flex align="left" overflowX="scroll">
+        <Flex 
+          align="left" 
+          overflowX="scroll" 
+          overflowY="hidden" 
+          sx={
+              { 
+              '::-webkit-scrollbar':{display:'none'}
+              }
+          }
+        >
           <ButtonGroup gap={3}>
             <Link as={RouterLink} to="/">
               <Button colorScheme="blackAlpha" size="lg">
