@@ -41,15 +41,15 @@ const ProjectCard = ({title, img, tag, link, description, isSchool}) => {
                     <Image src={img} boxSize={250} borderRadius="10%"></Image>
                 </Center>
                 <Flex justify="center" mt={2}>
-                {
-                !isSchool &&
-                        <Link href={link} isExternal mr={3}>
-                            <AiFillGithub size={40} />
-                        </Link>
-                }
-                <Center>
-                    <Text >{tag} Project</Text>
-                </Center>
+                    {
+                    !isSchool &&
+                            <Link href={link} isExternal mr={3}>
+                                <AiFillGithub size={40} />
+                            </Link>
+                    }
+                    <Center>
+                        <Text >{tag} Project</Text>
+                    </Center>
                 </Flex>
                 <Box 
                 overflowY="scroll" 

@@ -63,6 +63,15 @@ const Projects = () => {
       fallback: 'column',
     },
   )
+  const flexAlignment = useBreakpointValue(
+    {
+      base: 'center',
+      md: 'left',
+    },
+    {
+      fallback: 'center',
+    },
+  )
 
   return (
     <Box bg="#2C1B47" w="100%" minH="100vh" h="100%">
@@ -71,18 +80,18 @@ const Projects = () => {
           <Text color="white">Projects</Text>
         </Heading>
         <Flex gap={20} mb={3} direction={flexDirection}>
-            <Flex gap="5%">
+            <Flex gap="2%" direction={flexDirection} align={flexAlignment}>
               <Text fontSize="2xl" fontWeight="600" color="white" align="center"> Personal Projects</Text>
               <Switch onChange={() => {setPersonal(!personal)}} colorScheme="purple" mt={3} defaultChecked/>
             </Flex>
-            <Flex gap="2%">
+            <Flex gap="2%" direction={flexDirection} align={flexAlignment}>
               <Text fontSize="2xl" fontWeight="600" color="white" align="center"> OSS Contributions</Text>
               <Switch onChange={() => {setContributed(!contributed)}} colorScheme="purple" mt={3} defaultChecked/>
             </Flex>
-            <Flex gap="2%">
+            <Flex gap="5%" direction={flexDirection} align={flexAlignment}>
               <Text fontSize="2xl" fontWeight="600" color="white" align="center"> School Projects</Text>
               <Switch onChange={() => {setSchool(!school)}} colorScheme="purple" mt={3} defaultChecked/>
-        </Flex>
+          </Flex>
         </Flex>
 
         <Box />
