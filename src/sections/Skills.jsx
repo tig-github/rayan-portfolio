@@ -1,11 +1,33 @@
 import React from "react";
-import { Box, Text, Heading, Flex, Stack, useBreakpointValue } from "@chakra-ui/react";
+import { 
+    Box, 
+    Text, 
+    Heading, 
+    Flex, 
+    Stack, 
+    useBreakpointValue 
+} from "@chakra-ui/react";
 import { FaPython, FaJava, FaReact } from "react-icons/fa";
 import { FaGolang } from "react-icons/fa6";
-import { SiCsharp, SiCplusplus, SiC, SiRiscv, SiLua, SiPostgresql, SiMysql, SiNeo4J, SiApachecassandra, SiCouchbase, SiExpress, SiFlask, SiDotnet, SiTensorflow } from "react-icons/si";
 import { IoLogoJavascript } from "react-icons/io5";
 import { TbLambda, TbBrandKotlin, TbBrandMongodb  } from "react-icons/tb";
 import { DiProlog, DiRuby, DiNodejs } from "react-icons/di";
+import { 
+    SiCsharp, 
+    SiCplusplus, 
+    SiC, 
+    SiRiscv, 
+    SiLua, 
+    SiPostgresql, 
+    SiMysql, 
+    SiNeo4J, 
+    SiApachecassandra, 
+    SiCouchbase, 
+    SiExpress, 
+    SiFlask, 
+    SiDotnet, 
+    SiTensorflow 
+} from "react-icons/si";
 
 const Skills = () => {
     const flexAlignment = useBreakpointValue(
@@ -72,7 +94,7 @@ const Skills = () => {
                     </Flex>
                 </Flex>
                 <Flex gap={3} w="50%" wrap="wrap" align={flexAlignment}>
-                    <Box width="12rem">
+                    <Box>
                         <Text fontSize="2xl" fontWeight="bold" color="white">Experience With</Text>
                     </Box>
                     <Flex gap={3} ml={flexMargin} wrap="wrap">
@@ -87,7 +109,6 @@ const Skills = () => {
                     </Flex>
                 </Flex>
             </Stack>
-
         </Box>
     );
 }

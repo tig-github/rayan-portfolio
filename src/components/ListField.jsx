@@ -24,7 +24,7 @@ const ListField = ({ items, mh, links }) => {
       <List spacing={4} p="1rem">
         {Object.keys(items).map((k) => {
           return (
-            <ListItem key={Math.random()}>
+            <ListItem key={Math.random()*1000}>
               <Stack direction="column">
                 <HStack>
                   <Heading size="sm">{k}</Heading>
