@@ -39,9 +39,9 @@ const Navbar = () => {
                 Courses
               </Button>
             </HashLink>
-            <HashLink smooth to="/#blog">
+            <HashLink smooth to="/#resources">
               <Button colorScheme="blackAlpha" size="lg">
-                Blog
+                Resources
               </Button>
             </HashLink>
           </ButtonGroup>

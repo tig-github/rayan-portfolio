@@ -10,7 +10,7 @@ import {
 import { FaPython, FaJava, FaReact } from "react-icons/fa";
 import { FaGolang } from "react-icons/fa6";
 import { IoLogoJavascript } from "react-icons/io5";
-import { TbLambda, TbBrandKotlin, TbBrandMongodb  } from "react-icons/tb";
+import { TbLambda, TbBrandKotlin, TbBrandMongodb } from "react-icons/tb";
 import { DiProlog, DiRuby, DiNodejs } from "react-icons/di";
 import { 
     SiCsharp, 
