@@ -1,13 +1,13 @@
 import React from "react";
 import { Box, Flex, Button, ButtonGroup, Link, Spacer } from "@chakra-ui/react";
-import { Link as RouterLink } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import { AiFillGithub } from "react-icons/ai";
 import { FaLinkedin } from "react-icons/fa";
 
 const Navbar = () => {
   return (
     <>
-      <Box bg="#2C1B47" w="100%" p={4}>
+      <Box bg="#281b3d" w="100%" p={4} position="fixed" zIndex="sticky">
         <Flex 
           align="left" 
           overflowX="scroll" 
@@ -19,26 +19,31 @@ const Navbar = () => {
           }
         >
           <ButtonGroup gap={3}>
-            <Link as={RouterLink} to="/">
+            <HashLink smooth to="/#">
               <Button colorScheme="blackAlpha" size="lg">
                 Home
               </Button>
-            </Link>
-            <Link as={RouterLink} to="/projects">
+            </HashLink>
+            <HashLink smooth to="/#skills">
+              <Button colorScheme="blackAlpha" size="lg">
+                Skills
+              </Button>
+            </HashLink>
+            <HashLink smooth to="/#projects">
               <Button colorScheme="blackAlpha" size="lg">
                 Projects
               </Button>
-            </Link>
-            <Link as={RouterLink} to="/courses">
+            </HashLink>
+            <HashLink smooth to="/#courses">
               <Button colorScheme="blackAlpha" size="lg">
                 Courses
               </Button>
-            </Link>
-            <Link as={RouterLink} to="/blog">
+            </HashLink>
+            <HashLink smooth to="/#blog">
               <Button colorScheme="blackAlpha" size="lg">
                 Blog
               </Button>
-            </Link>
+            </HashLink>
           </ButtonGroup>
           <Spacer />
           <Link href="https://www.linkedin.com/in/rayantig/" isExternal mr={3} ml={6}>
