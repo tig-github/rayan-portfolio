@@ -12,6 +12,8 @@ import {
 } from "@chakra-ui/react";
 import HomeField from "../components/HomeField";
 import me from "../images/rayan.jpg";
+import Projects from "./Projects";
+import Courses from "./Courses";
 
 const Home = () => {
   const imageSize = useBreakpointValue({
@@ -37,7 +39,8 @@ const Home = () => {
             <HomeField />
           </Flex>
         </Flex>
-        <Container></Container>
+        <Projects />
+        <Courses />
       </Stack>
     </Box>
   );
