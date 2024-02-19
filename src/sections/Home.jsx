@@ -1,7 +1,6 @@
 import React from "react";
 import { 
   Box, 
-  Container, 
   Text, 
   Center,
   Heading, 
@@ -13,6 +12,7 @@ import {
 import HomeField from "../components/HomeField";
 import me from "../images/rayan.jpg";
 import Projects from "./Projects";
+import Skills from "./Skills";
 import Courses from "./Courses";
 import Blog from "./Blog";
 
@@ -41,6 +41,7 @@ const Home = () => {
           </Flex>
         </Flex>
         <Projects />
+        <Skills />
         <Courses/>
         <Blog />
       </Stack>

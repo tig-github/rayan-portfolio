@@ -29,6 +29,11 @@ const Navbar = () => {
                 Projects
               </Button>
             </HashLink>
+            <HashLink smooth to="/#skills">
+              <Button colorScheme="blackAlpha" size="lg">
+                Skills
+              </Button>
+            </HashLink>
             <HashLink smooth to="/#courses">
               <Button colorScheme="blackAlpha" size="lg">
                 Courses

@@ -12,7 +12,7 @@ import {
 const HomeField = () => {
   return (
     <>
-      <Box bg="#DCCAE9" borderRadius="1rem" w="100%" h="100%" pb={5} pl={5} pr={5} mb="5rem">
+      <Box bg="#DCCAE9" borderRadius="1rem" w="100%" h="100%" pb={5} pl={5} pr={5}>
         <Stack align="left" mt="1rem" spacing={5}>
           <Heading mb="2rem" align="left">
             <Text>Hello! My name is Rayan</Text>
