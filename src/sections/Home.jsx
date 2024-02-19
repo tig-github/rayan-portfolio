@@ -40,8 +40,8 @@ const Home = () => {
             <HomeField />
           </Flex>
         </Flex>
-        <Projects />
         <Skills />
+        <Projects />
         <Courses/>
         <Blog />
       </Stack>

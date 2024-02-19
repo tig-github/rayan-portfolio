@@ -76,7 +76,7 @@ const Projects = () => {
   return (
     <Box bg="#2C1B47" w="100%" h="100%"id="projects">
       <Stack align="center" spacing={10}>
-        <Heading sz="md" mt="8rem" mb="4rem">
+        <Heading sz="md" mt="12rem" mb="4rem">
           <Text color="white">Projects</Text>
         </Heading>
         <Flex gap={20} mb={3} direction={flexDirection}>
