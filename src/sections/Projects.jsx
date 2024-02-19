@@ -74,7 +74,7 @@ const Projects = () => {
   )
 
   return (
-    <Box bg="#2C1B47" w="100%" minH="100vh" h="100%">
+    <Box bg="#2C1B47" w="100%" minH="100vh" h="100%" id="projects">
       <Stack align="center" spacing={10}>
         <Heading sz="md" mt="2rem" mb="4rem">
           <Text color="white">Projects</Text>

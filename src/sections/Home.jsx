@@ -14,6 +14,7 @@ import HomeField from "../components/HomeField";
 import me from "../images/rayan.jpg";
 import Projects from "./Projects";
 import Courses from "./Courses";
+import Blog from "./Blog";
 
 const Home = () => {
   const imageSize = useBreakpointValue({
@@ -40,7 +41,8 @@ const Home = () => {
           </Flex>
         </Flex>
         <Projects />
-        <Courses />
+        <Courses/>
+        <Blog />
       </Stack>
     </Box>
   );

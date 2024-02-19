@@ -9,7 +9,7 @@ const blog0Text =
 const Blog = () => {
   return (
     <>
-      <Box bg="#2C1B47" w="100%" h="100%">
+      <Box bg="#2C1B47" w="100%" h="100%" id="blog">
         <Stack align="center" spacing={10}>
           <Heading as="h1" mt="2rem" mb="4rem">
             <Text color="white">Blog</Text>

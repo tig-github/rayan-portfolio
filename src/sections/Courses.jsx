@@ -76,7 +76,7 @@ const Courses = () => {
   };
 
   return (
-    <Box bg="#2C1B47" w="100%" h="100%">
+    <Box bg="#2C1B47" w="100%" h="100%" id="courses">
       <Stack align="center" spacing={8}>
         <Heading sz="md" mt="2rem">
           <Text color="white">Courses</Text>
