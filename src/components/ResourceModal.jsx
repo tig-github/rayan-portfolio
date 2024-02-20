@@ -26,9 +26,9 @@ const ResourceModal = ({isOpen, onClose, resource, resourceLinks, icon}) => {
                 </ModalHeader>
                 <ModalCloseButton />
                 <ModalBody>
-                    <Stack align="center">
+                    <Stack align="center" pb="1rem">
                         {icon}
-                        <List styleType="disc" pt="3rem">
+                        <List styleType="disc" pt="2rem">
                             {Object.keys(resourceLinks).map(r => {
                                 return (
                                     <ListItem mt="5%">

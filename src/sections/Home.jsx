@@ -13,7 +13,6 @@ import HomeField from "../components/HomeField";
 import me from "../images/rayan.jpg";
 import Projects from "./Projects";
 import Skills from "./Skills";
-import Courses from "./Courses";
 import Resources from "./Resources";
 
 const Home = () => {
@@ -37,7 +36,6 @@ const Home = () => {
         </Flex>
         <Skills />
         <Projects />
-        <Courses/>
         <Resources />
         <Box />
       </Stack>
