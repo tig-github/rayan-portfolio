@@ -32,7 +32,7 @@ const ResourceModal = ({isOpen, onClose, resource, resourceLinks, icon}) => {
                             {Object.keys(resourceLinks).map(r => {
                                 return (
                                     <ListItem mt="5%">
-                                        <Link href={resourceLinks.r} isExternal>
+                                        <Link href={resourceLinks[r]} isExternal>
                                             {r}
                                         </Link>
                                     </ListItem>
