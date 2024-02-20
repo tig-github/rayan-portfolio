@@ -5,7 +5,6 @@ Large list of items
 import React from "react";
 import {
   Box,
-  Container,
   List,
   ListItem,
   Text,
