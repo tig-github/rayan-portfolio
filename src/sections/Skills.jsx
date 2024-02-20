@@ -80,9 +80,8 @@ const Skills = () => {
         }
     )
     return (
-        <Box bg="#2C1B47"w="100%" h="100%" id="skills">
-
-            <Stack align="center" gap="3rem">
+        <Box bg="#2C1B47" w="100%" h="100%" id="skills">
+            <Stack align="center" gap="3rem" mb="5%" mt={{base: "1%", md: "3%"}}>
                 <Heading sz="md" mt="8rem">
                     <Text color="white">Skills</Text>
                 </Heading>

@@ -43,7 +43,7 @@ const Resources = () => {
     <>
       <Box bg="#2C1B47" w="100%" h="100%" id="resources">
         <Stack align="center" spacing={10}>
-          <Heading as="h1" mt="2rem" mb="4rem">
+          <Heading as="h1" mt={{base: "40%", md: "10%"}} mb="4rem">
             <Text color="white">Resources</Text>
           </Heading>
           {/* <BlogField
@@ -51,11 +51,11 @@ const Resources = () => {
             header={"Hello there 👋"}
             image={blog0Image}
           /> */}
-          <Box bg="#DCCAE9" px="1rem" ml=".5rem" mb="2rem" mt="2rem" w="60%" borderRadius="1rem">
+          <Box bg="#DCCAE9" px="1rem" ml=".5rem" mb="2rem" w="60%" borderRadius="1rem">
             <Stack align="center" my="2rem" spacing={10}>
-              <Heading>
-                <Text>Helpful Resources</Text>
-              </Heading>
+                <Heading>
+                  <Text align="center">Helpful Resources</Text>
+                </Heading>
               <Text align="center">The following are resources that helped me learn about Computer Science and Programming.</Text>
               <Text align="center">Click any of the icons below to learn more.</Text>
               <Center>

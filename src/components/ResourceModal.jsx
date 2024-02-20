@@ -16,7 +16,7 @@ import {
   
 const ResourceModal = ({isOpen, onClose, resource, resourceLinks, icon}) => {
     return (
-        <Modal isOpen={isOpen} onClose={onClose} variant="purple">
+        <Modal isOpen={isOpen} onClose={onClose} variant="purple" preserveScrollBarGap>
             <ModalOverlay />
             <ModalContent>
                 <ModalHeader>
