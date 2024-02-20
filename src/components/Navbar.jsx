@@ -12,6 +12,7 @@ const Navbar = () => {
           align="left" 
           overflowX="scroll" 
           overflowY="hidden" 
+          style = {{scrollbarWidth: "none"}}
           sx={
               { 
               '::-webkit-scrollbar':{display:'none'}

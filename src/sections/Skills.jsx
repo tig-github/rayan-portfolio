@@ -64,7 +64,7 @@ const Skills = () => {
     const flexAlignment = useBreakpointValue(
     {
         base: 'center',
-        md: 'left',
+        md: 'center',
     },
     {
         fallback: 'center',

@@ -39,11 +39,12 @@ const Resources = () => {
   const { isOpen: isJavascriptOpen, onOpen: onJavascriptOpen, onClose: onJavascriptClose } = useDisclosure();
   const { isOpen: isReactOpen, onOpen: onReactOpen, onClose: onReactClose } = useDisclosure();
   const { isOpen: isCplusplusOpen, onOpen: onCplusplusOpen, onClose: onCplusplusClose } = useDisclosure();
+  
   return (
     <>
       <Box bg="#2C1B47" w="100%" h="100%" id="resources">
         <Stack align="center" spacing={10}>
-          <Heading as="h1" mt={{base: "40%", md: "10%"}} mb="4rem">
+          <Heading as="h1" mt={{base: "30%", md: "3%"}} mb="4rem">
             <Text color="white">Resources</Text>
           </Heading>
           {/* <BlogField

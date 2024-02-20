@@ -54,6 +54,7 @@ const ProjectCard = ({title, img, tag, link, description, isSchool}) => {
                 <Box 
                 overflowY="scroll" 
                 overflowX="hidden" 
+                style = {{scrollbarWidth: "none"}}
                 sx={
                     { 
                     '::-webkit-scrollbar':{display:'none'}
