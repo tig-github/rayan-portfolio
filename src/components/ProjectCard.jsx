@@ -30,7 +30,11 @@ const tagImages = {
 
 const ProjectCard = ({title, img, tag, link, description, isSchool}) => {
     return (
-        <Card w="20rem" maxH="37rem" bg="#7f59bb">
+        <Card 
+            w="20rem" 
+            maxH="37rem" 
+            bg="#7f59bb"
+        >
             <CardHeader maxH="6rem">
                 <Center>
                     <Text fontSize="2xl" fontWeight="bold" align="center">{title}</Text>
