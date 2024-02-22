@@ -26,6 +26,8 @@ const reactResourceLinks = {
   "https://react.dev/learn/thinking-in-react",
   "React Visualized":
   "https://react.gg/visualized#history-of-the-web",
+  "Visual Guide to State":
+  "https://daveceddia.com/visual-guide-to-state-in-react/",
 }
 const cplusplusResourceLinks = {
   "ICS 45C UCI Thornton Notes":
