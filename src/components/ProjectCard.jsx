@@ -12,30 +12,20 @@ import {
   CardHeader, 
   CardBody, 
   CardFooter,
-  Link 
+  Link,
 } from "@chakra-ui/react";
 import { AiFillGithub } from "react-icons/ai";
-import ctcDefaultImage from "../images/CTC.png"
-import icsscDefaultImage from "../images/icssc.svg";
-import defaultLogo from "../images/yaz.svg";
-import schoolLogo from "../images/uci.png";
-
-const tagImages = {
-    "CTC": ctcDefaultImage,
-    "ICSSC": icsscDefaultImage,
-    "Personal": defaultLogo,
-    "School": schoolLogo,
-    "Hackathon": schoolLogo,
-}
 
 const ProjectCard = ({title, img, tag, link, description, isSchool}) => {
     return (
         <Card 
             w="20rem" 
             maxH="37rem" 
-            bg="#7f59bb"
+            bg="rgba(212, 90, 253, .2)"
+            color="white"
+            borderRadius="7%"
         >
-            <CardHeader maxH="6rem">
+            <CardHeader maxH="6rem" opacity="100%">
                 <Center>
                     <Text fontSize="2xl" fontWeight="bold" align="center">{title}</Text>
                 </Center>
@@ -48,7 +38,7 @@ const ProjectCard = ({title, img, tag, link, description, isSchool}) => {
                     {
                     !isSchool &&
                             <Link href={link} isExternal mr={3}>
-                                <AiFillGithub size={40} />
+                                <AiFillGithub size={40} color="black"/>
                             </Link>
                     }
                     <Center>

@@ -33,7 +33,7 @@ const ResourceModal = ({isOpen, onClose, resource, resourceLinks, icon}) => {
                         <List styleType="disc" pt="2rem">
                             {Object.keys(resourceLinks).map(r => {
                                 return (
-                                    <ListItem mt="5%">
+                                    <ListItem mt="5%" key={Math.random()*1000}>
                                         <Link href={resourceLinks[r]} isExternal>
                                             {r}
                                         </Link>

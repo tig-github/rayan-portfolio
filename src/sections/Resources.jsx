@@ -22,10 +22,12 @@ const jsResourceLinks = {
   "https://github.com/specter01wj/Book-you_dont_know_js",
 }
 const reactResourceLinks = {
-  "React dev tutorial":
+  "Thinking in React":
   "https://react.dev/learn/thinking-in-react",
   "React Visualized":
   "https://react.gg/visualized#history-of-the-web",
+  "You might not need an effect":
+  "https://react.dev/learn/you-might-not-need-an-effect",
 }
 const cplusplusResourceLinks = {
   "ICS 45C UCI Thornton Notes":
