@@ -14,14 +14,16 @@ import {
   CardHeader, 
   CardBody, 
   Link,
+  Fade,
   useDisclosure,
 } from "@chakra-ui/react";
 import { AiFillGithub } from "react-icons/ai";
 import ProjectCardModal from "./ProjectCardModal";
 
-const ProjectCard = ({title, img, tag, date, link, description, icons, isSchool}) => {
+const ProjectCard = ({title, img, tag, date, link, description, icons, isSchool, fadeOpen}) => {
     const { isOpen, onOpen, onClose } = useDisclosure();
     return (
+        <Fade in={fadeOpen} transition={{enter: {duration: 0.2}}} unmountOnExit>
         <Card 
             w="20rem" 
             bg="rgba(212, 90, 253, .2)"
@@ -59,6 +61,7 @@ const ProjectCard = ({title, img, tag, date, link, description, icons, isSchool}
                 </Stack>
             </CardBody>
         </Card>
+        </Fade>
     )
 }
 
