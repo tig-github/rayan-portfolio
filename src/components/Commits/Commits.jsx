@@ -1,12 +1,15 @@
 // to display github commit heapmap on the main page
-import React from 'react';
+import React, { useState } from 'react';
 import { 
     Box,
+    Button,
 } from "@chakra-ui/react";
 import CalendarHeatmap from 'react-calendar-heatmap';
 import { testValues, expandedTestValues } from '../../lib/dummyHeatmapData';
+import { getIssues } from '../../utils/github';
 import 'react-calendar-heatmap/dist/styles.css';
 import './Commits.css';
+
 
 // simple function returning color values
 const colorValue = (value) => {
@@ -25,14 +28,18 @@ const colorValue = (value) => {
     return 'hugecommit';
 }
 
+  
 
 const Commits = () => {
+    const [year, setYear] = useState(2016);
+
     return (
         <>
-            <Box w="50%" mt="4rem">
+            <Box w="80%" mt="5%">
+                <Button onClick={getIssues}>get issues</Button>
                 <CalendarHeatmap
-                    startDate={new Date('2016-01-01')}
-                    endDate={new Date('2016-04-01')}
+                    startDate={new Date(`${year}-01-01`)}
+                    endDate={new Date(`${year}-12-31`)}
                     values={expandedTestValues}
                     classForValue={(value) => colorValue(value)}
                 />
