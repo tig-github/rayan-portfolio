@@ -3,40 +3,45 @@
 */
 import React from "react";
 import {
-  Box,
   Text,
+  Button,
   Center,
   Flex,
+  Stack,
   Image,
   Card,
   CardHeader, 
   CardBody, 
-  CardFooter,
-  Link 
+  Link,
+  Fade,
+  useDisclosure,
 } from "@chakra-ui/react";
 import { AiFillGithub } from "react-icons/ai";
-import ctcDefaultImage from "../images/CTC.png"
-import icsscDefaultImage from "../images/icssc.svg";
-import defaultLogo from "../images/yaz.svg";
-import schoolLogo from "../images/uci.png";
+import ProjectCardModal from "./ProjectCardModal";
 
-const tagImages = {
-    "CTC": ctcDefaultImage,
-    "ICSSC": icsscDefaultImage,
-    "Personal": defaultLogo,
-    "School": schoolLogo,
-    "Hackathon": schoolLogo,
-}
-
-const ProjectCard = ({title, img, tag, link, description, isSchool}) => {
+const ProjectCard = ({title, img, tag, date, link, description, icons, isSchool, fadeOpen}) => {
+    const { isOpen, onOpen, onClose } = useDisclosure();
     return (
-        <Card w="20rem" maxH="37rem" bg="#7f59bb">
-            <CardHeader maxH="6rem">
+        <Fade in={fadeOpen} transition={{enter: {duration: 0.2}}} unmountOnExit>
+        <Card 
+            w="20rem" 
+            bg="rgba(212, 90, 253, .2)"
+            color="white"
+            borderRadius="7%"
+            _hover={
+                {
+                    transform: "perspective(1200px) rotateX(10deg) rotateY(-10deg) rotateZ(2deg)",
+                    "transitionDuration": "1s",
+                
+                }}
+        >
+            <CardHeader maxH="6rem" opacity="100%">
                 <Center>
                     <Text fontSize="2xl" fontWeight="bold" align="center">{title}</Text>
                 </Center>
             </CardHeader>
             <CardBody>
+                <Stack gap={4}>
                 <Center>
                     <Image src={img} boxSize={250} borderRadius="10%"></Image>
                 </Center>
@@ -44,29 +49,24 @@ const ProjectCard = ({title, img, tag, link, description, isSchool}) => {
                     {
                     !isSchool &&
                             <Link href={link} isExternal mr={3}>
-                                <AiFillGithub size={40} />
+                                <AiFillGithub size={40} color="white"/>
                             </Link>
                     }
                     <Center>
-                        <Text >{tag} Project</Text>
+                        <Text >{tag} Project - {date}</Text>
                     </Center>
                 </Flex>
-                <Box 
-                overflowY="scroll" 
-                overflowX="hidden" 
-                style = {{scrollbarWidth: "none"}}
-                sx={
-                    { 
-                    '::-webkit-scrollbar':{display:'none'}
-                    }
-                } 
-                maxH="30%">
-                    <Text mt={4}>{description}</Text>
-                </Box>
+                <Flex justify="center" gap={2}>
+                    {icons && icons.map((i) => i)}
+                </Flex>
+                <Center>
+                    <Button onClick={onOpen} colorScheme="blackAlpha" color="white">Learn More</Button>
+                    <ProjectCardModal isOpen={isOpen} onClose={onClose} title={title} description={description}/>
+                </Center>
+                </Stack>
             </CardBody>
-            <CardFooter>
-            </CardFooter>
         </Card>
+        </Fade>
     )
 }
 

@@ -7,4 +7,10 @@ html,
 body {
   overflow-x: hidden;
   color: #7f59bb;
+  color: #d45afd;
+}
+
+rect {
+  height: 50;
+  width: 50;
 }
