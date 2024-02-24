@@ -3,7 +3,6 @@
 */
 import React from "react";
 import {
-  Box,
   Text,
   Button,
   Center,
@@ -29,6 +28,12 @@ const ProjectCard = ({title, img, tag, date, link, description, icons, isSchool,
             bg="rgba(212, 90, 253, .2)"
             color="white"
             borderRadius="7%"
+            _hover={
+                {
+                    transform: "perspective(1000px) rotateX(10deg) rotateY(-10deg) rotateZ(2deg)",
+                    "transition-duration": "1s",
+                
+                }}
         >
             <CardHeader maxH="6rem" opacity="100%">
                 <Center>

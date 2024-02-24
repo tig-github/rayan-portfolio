@@ -13,37 +13,12 @@ import { FaPython, FaReact } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
 import { SiCplusplus, } from "react-icons/si";
 import ResourceModal from "../components/ResourceModal";
-
-const pythonResourceLinks = {
-  "CSDojo Learn to Program":
-  "https://www.youtube.com/watch?v=Z1Yd7upQsXY",
-  "ICS 33 UCI Pattis Notes":
-  "https://ics.uci.edu/~pattis/ICS-33/index.html",
-}
-const jsResourceLinks = {
-  "MDN Javascript Guide":
-  "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide",
-  "Javascript ES6 W3Schools":
-  "https://www.w3schools.com/js/js_es6.asp",
-  "Eloquent Javascript":
-  "https://eloquentjavascript.net/",
-  "You don't know Javascript":
-  "https://github.com/specter01wj/Book-you_dont_know_js",
-}
-const reactResourceLinks = {
-  "Thinking in React":
-  "https://react.dev/learn/thinking-in-react",
-  "React Visualized":
-  "https://react.gg/visualized#history-of-the-web",
-  "You might not need an effect":
-  "https://react.dev/learn/you-might-not-need-an-effect",
-}
-const cplusplusResourceLinks = {
-  "ICS 45C UCI Thornton Notes":
-  "https://ics.uci.edu/~thornton/ics45c/Notes/",
-  "Dive Into Systems":
-  "https://diveintosystems.org/book/C1-C_intro/index.html",
-}
+import {
+  pythonResourceLinks,
+  jsResourceLinks,
+  reactResourceLinks,
+  cplusplusResourceLinks,
+} from "../lib/resourceData";
 
 const Resources = () => {
   const { isOpen: isPythonOpen, onOpen: onPythonOpen, onClose: onPythonClose } = useDisclosure();
@@ -58,11 +33,6 @@ const Resources = () => {
           <Heading as="h1" mt={{base: "30%", md: "3%"}} mb="4rem">
             <Text color="white">Resources</Text>
           </Heading>
-          {/* <BlogField
-            text={blog0Text}
-            header={"Hello there 👋"}
-            image={blog0Image}
-          /> */}
           <Box bg="#DCCAE9" px="1rem" ml=".5rem" mb="2rem" w="60%" borderRadius="1rem">
             <Stack align="center" my="2rem" spacing={10}>
                 <Heading>

@@ -1,5 +1,4 @@
 import React from "react";
-import { useState } from "react";
 import { 
   Box, 
   Text, 
@@ -53,7 +52,6 @@ const Projects = () => {
   const { isOpen: fadeOpenPersonal, onToggle: onTogglePersonal } = useDisclosure({ defaultIsOpen: true });
   const { isOpen: fadeOpenOSS, onToggle: onToggleOSS } = useDisclosure({ defaultIsOpen: true });
   const { isOpen: fadeOpenSchool, onToggle: onToggleSchool } = useDisclosure({ defaultIsOpen: true });
-
 
   return (
     <Box bg="#2C1B47" w="100%" h="100%"  minH="calc(100vh)" id="projects">
