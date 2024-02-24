@@ -1,5 +1,5 @@
 // to display github commit heapmap on the main page
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { 
     Box,
     Button,
@@ -32,14 +32,38 @@ const colorValue = (value) => {
 let didInit = false;
 
 const Commits = () => {
-    const [year, setYear] = useState(2016);
+    const [year, setYear] = useState(2024);
     const [commits, setCommits] = useState([]);
-    const displayedCommits = commits.filter((commit) => {
-        let date = (commit['commit']['author']['date']).slice(0,4);
-        if (parseInt(date) === year) {
-            return commit;
-        }
-    })
+
+    // processes github commit information into values for the react calendar heatmap library
+    // creates dict of form {date: count} then reprocesses into format of [...{date: date, count: count}]
+    const processCommitCounts = (commits) => {
+        let counts = {};
+        console.log(commits)
+        commits.forEach(
+            (commit) => {
+                let commitDate = (commit['commit']['author']['date']).slice(0,10);
+                if (commitDate in counts) {
+                    counts[commitDate]++;
+                }
+                else {
+                    counts[commitDate] = 1;
+                }
+            }
+        )
+        console.log(counts);
+        return counts;
+    }
+    // turns the count dict into an array of individual values
+    const processCommitValues = (counts) => {
+        let vals = [];
+        Object.keys(counts).map((commitDate) => {
+            vals.push({date: commitDate, count: counts[commitDate]});
+        })
+        return vals;
+    }
+    const commitValues = useMemo(() => processCommitValues(processCommitCounts(commits)), [commits]);
+
 
     const handleCommits = async () => {
         try {
@@ -53,7 +77,8 @@ const Commits = () => {
     }
 
     useEffect(() => {console.log(commits)}, [commits]);
-    useEffect(() => {console.log(displayedCommits)}, [displayedCommits]);
+    useEffect(() => {console.log(commitValues)}, [commitValues]);
+    // useEffect(() => {console.log(displayedCommits)}, [displayedCommits]);
 
     return (
         <>
@@ -65,7 +90,7 @@ const Commits = () => {
                 <CalendarHeatmap
                     startDate={new Date(`${year}-01-01`)}
                     endDate={new Date(`${year}-12-31`)}
-                    values={expandedTestValues}
+                    values={commitValues}
                     classForValue={(value) => colorValue(value)}
                 />
             </Box>
