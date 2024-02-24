@@ -19,7 +19,7 @@ import {
 import { AiFillGithub } from "react-icons/ai";
 import ProjectCardModal from "./ProjectCardModal";
 
-const ProjectCard = ({title, img, tag, link, description, icons, isSchool}) => {
+const ProjectCard = ({title, img, tag, date, link, description, icons, isSchool}) => {
     const { isOpen, onOpen, onClose } = useDisclosure();
     return (
         <Card 
@@ -46,7 +46,7 @@ const ProjectCard = ({title, img, tag, link, description, icons, isSchool}) => {
                             </Link>
                     }
                     <Center>
-                        <Text >{tag} Project</Text>
+                        <Text >{tag} Project - {date}</Text>
                     </Center>
                 </Flex>
                 <Flex justify="center" gap={2}>
