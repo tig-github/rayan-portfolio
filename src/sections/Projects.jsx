@@ -15,6 +15,19 @@ import algoImage from "../images/coursework.PNG";
 import personalImage from "../images/social.jpeg";
 import ctcDefaultImage from "../images/CTC.png"
 import icsscDefaultImage from "../images/icssc.svg";
+import { FaPython, FaReact } from "react-icons/fa";
+import { DiNodejs } from "react-icons/di";
+import { TbBrandMongodb } from "react-icons/tb";
+import { 
+  SiNumpy, 
+  SiPandas, 
+  SiFlask, 
+  SiPostgresql,
+  SiExpress, 
+  SiTrpc,
+  SiRiscv, 
+} from "react-icons/si";
+
 
 const personalItems = {
   Yazify:
@@ -49,6 +62,44 @@ const courseItems = {
     "A fully functioning game of Wordle built entirely in MIPS assembly",
 };
 
+const yazifyIcons = [
+  <FaPython size={40} color="white"/>, 
+  <FaReact size={40} color="white"/>, 
+  <SiNumpy size={40} color="white"/>,
+  <SiPandas size={40} color="white"/>,
+  <SiFlask size={40} color="white"/>
+];
+const greedyAntsIcons = [
+  <FaPython size={40} color="white"/>, 
+  <FaReact size={40} color="white"/>, 
+  <SiFlask size={40} color="white"/>
+];
+const ctcIcons = [
+  <FaReact size={40} color="white"/>, 
+  <SiExpress size={40} color="white"/>, 
+  <SiPostgresql size={40} color="white"/>, 
+  <DiNodejs size={40} color="white"/>, 
+]
+const icsscIcons = [
+  <FaReact size={40} color="white"/>, 
+  <SiTrpc size={40} color="white"/>, 
+  <TbBrandMongodb size={40} color="white"/>, 
+  <DiNodejs size={40} color="white"/>, 
+]
+const cs121Icons = [
+  <FaPython size={40} color="white"/>, 
+  <SiNumpy size={40} color="white"/>,
+  <SiPandas size={40} color="white"/>,
+  <SiFlask size={40} color="white"/>
+]
+const cs117Icons = [
+  <FaPython size={40} color="white"/>, 
+  <SiNumpy size={40} color="white"/>,
+  <SiPandas size={40} color="white"/>,
+]
+const ics51Icons = [
+  <SiRiscv size={40} color="white"/>, 
+]
 
 const Projects = () => {
   const [personal, setPersonal] = useState(true);
@@ -93,34 +144,40 @@ const Projects = () => {
               <Switch onChange={() => {setSchool(!school)}} colorScheme="purple" mt={3} defaultChecked/>
           </Flex>
         </Flex>
-
         <Box />
         <Flex gap={20} wrap="wrap" justify="center" w="80%">
           {
             personal && 
             <>
-              <ProjectCard title={"Yazify"} img={yazifyImage} tag={"Personal"} link={"https://github.com/tig-github/yazify"} description={personalItems.Yazify}/>
-              <ProjectCard title={"Algorithms Notebook"} img={algoImage} tag={"Personal"} link={"https://github.com/tig-github/cs16x-algorithms-notebook"} description={personalItems.Algos}/>
-              <ProjectCard title={"GreedyAnts"} img={personalImage} tag={"Hackathon"} link={"https://github.com/tig-github/GreedyAnts"} description={personalItems.GreedyAnts}/>
+              <ProjectCard 
+                title={"Yazify"} 
+                img={yazifyImage} 
+                tag={"Personal"} 
+                link={"https://github.com/tig-github/yazify"} 
+                description={personalItems.Yazify}
+                icons={yazifyIcons}
+              />
+              <ProjectCard title={"Algorithms Notebook"} img={algoImage} tag={"Personal"} link={"https://github.com/tig-github/cs16x-algorithms-notebook"} description={personalItems.Algos} icons={[<FaPython size={40} color="white"/>]}/>
+              <ProjectCard title={"GreedyAnts"} img={personalImage} tag={"Hackathon"} link={"https://github.com/tig-github/GreedyAnts"} description={personalItems.GreedyAnts} icons={greedyAntsIcons}/>
             </>
           }
           {
             contributed &&
             <>
-              <ProjectCard title={"Patriots and Paws"} img={ctcDefaultImage} tag={"CTC"} link={"https://github.com/ctc-uci/patriots-and-paws-frontend"} description={OSSItems["Patriots and Paws"]}/>
-              <ProjectCard title={"Stand Up To Trash"} img={ctcDefaultImage} tag={"CTC"} link={"https://github.com/ctc-uci/stand-up-to-trash-frontend"} description={OSSItems.trash}/>
-              <ProjectCard title={"AntAlmanac"} img={icsscDefaultImage} tag={"ICSSC"} link={"https://github.com/icssc/AntAlmanac"} description={OSSItems.antalmanac}/>
-              <ProjectCard title={"Abound Food Care"} img={ctcDefaultImage} tag={"CTC"} link={"https://github.com/ctc-uci/abound-food-care-frontend"} description={OSSItems["Abound Food Care"]}/>
-              <ProjectCard title={"Women's Safety Website"} img={ctcDefaultImage}  tag={"CTC"} link={"https://github.com/ctc-uci/bp-women-safety"} description={OSSItems["Women's Safety Website"]}/>
+              <ProjectCard title={"Patriots and Paws"} img={ctcDefaultImage} tag={"CTC"} link={"https://github.com/ctc-uci/patriots-and-paws-frontend"} description={OSSItems["Patriots and Paws"]} icons={ctcIcons}/>
+              <ProjectCard title={"Stand Up To Trash"} img={ctcDefaultImage} tag={"CTC"} link={"https://github.com/ctc-uci/stand-up-to-trash-frontend"} description={OSSItems.trash} icons={ctcIcons}/>
+              <ProjectCard title={"AntAlmanac"} img={icsscDefaultImage} tag={"ICSSC"} link={"https://github.com/icssc/AntAlmanac"} description={OSSItems.antalmanac} icons={icsscIcons}/>
+              <ProjectCard title={"Abound Food Care"} img={ctcDefaultImage} tag={"CTC"} link={"https://github.com/ctc-uci/abound-food-care-frontend"} description={OSSItems["Abound Food Care"]} icons={ctcIcons}/>
+              <ProjectCard title={"Women's Safety Website"} img={ctcDefaultImage}  tag={"CTC"} link={"https://github.com/ctc-uci/bp-women-safety"} description={OSSItems["Women's Safety Website"]} icons={[<FaReact size={40} color="white"/>]}/>
             </>
 
           }
           {
             school &&
             <>
-              <ProjectCard title={"CS 117 Teapot Model"} img={personalImage} tag={"School"} description={courseItems.teapot} isSchool/>
-              <ProjectCard title={"CS 121 Search Engine"} img={personalImage} tag={"School"} description={courseItems["CS 121 Search Engine"]} isSchool/>
-              <ProjectCard title={"ICS 51 Assembly Wordle"} img={personalImage} tag={"School"} description={courseItems["ICS 51 Wordle in Assembly"]} isSchool/>
+              <ProjectCard title={"CS 117 Teapot Model"} img={personalImage} tag={"School"} description={courseItems.teapot} icons={cs117Icons} isSchool/>
+              <ProjectCard title={"CS 121 Search Engine"} img={personalImage} tag={"School"} description={courseItems["CS 121 Search Engine"]} icons={cs121Icons} isSchool/>
+              <ProjectCard title={"ICS 51 Assembly Wordle"} img={personalImage} tag={"School"} description={courseItems["ICS 51 Wordle in Assembly"]} icons={ics51Icons} isSchool/>
             </>
           }
         </Flex>

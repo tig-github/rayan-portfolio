@@ -1,5 +1,14 @@
 import React from "react";
-import { Box, Text, Heading, Stack, Flex, Center, Button, useDisclosure } from "@chakra-ui/react";
+import { 
+  Box, 
+  Text, 
+  Heading, 
+  Stack, 
+  Flex, 
+  Center, 
+  Button, 
+  useDisclosure,
+} from "@chakra-ui/react";
 import { FaPython, FaReact } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
 import { SiCplusplus, } from "react-icons/si";

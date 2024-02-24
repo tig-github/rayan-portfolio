@@ -5,22 +5,25 @@ import React from "react";
 import {
   Box,
   Text,
+  Button,
   Center,
   Flex,
+  Stack,
   Image,
   Card,
   CardHeader, 
   CardBody, 
-  CardFooter,
   Link,
+  useDisclosure,
 } from "@chakra-ui/react";
 import { AiFillGithub } from "react-icons/ai";
+import ProjectCardModal from "./ProjectCardModal";
 
-const ProjectCard = ({title, img, tag, link, description, isSchool}) => {
+const ProjectCard = ({title, img, tag, link, description, icons, isSchool}) => {
+    const { isOpen, onOpen, onClose } = useDisclosure();
     return (
         <Card 
             w="20rem" 
-            maxH="37rem" 
             bg="rgba(212, 90, 253, .2)"
             color="white"
             borderRadius="7%"
@@ -31,6 +34,7 @@ const ProjectCard = ({title, img, tag, link, description, isSchool}) => {
                 </Center>
             </CardHeader>
             <CardBody>
+                <Stack gap={4}>
                 <Center>
                     <Image src={img} boxSize={250} borderRadius="10%"></Image>
                 </Center>
@@ -38,28 +42,22 @@ const ProjectCard = ({title, img, tag, link, description, isSchool}) => {
                     {
                     !isSchool &&
                             <Link href={link} isExternal mr={3}>
-                                <AiFillGithub size={40} color="black"/>
+                                <AiFillGithub size={40} color="white"/>
                             </Link>
                     }
                     <Center>
                         <Text >{tag} Project</Text>
                     </Center>
                 </Flex>
-                <Box 
-                overflowY="scroll" 
-                overflowX="hidden" 
-                style = {{scrollbarWidth: "none"}}
-                sx={
-                    { 
-                    '::-webkit-scrollbar':{display:'none'}
-                    }
-                } 
-                maxH="30%">
-                    <Text mt={4}>{description}</Text>
-                </Box>
+                <Flex justify="center" gap={2}>
+                    {icons && icons.map((i) => i)}
+                </Flex>
+                <Center>
+                    <Button onClick={onOpen} colorScheme="blackAlpha" color="white">Learn More</Button>
+                    <ProjectCardModal isOpen={isOpen} onClose={onClose} title={title} description={description}/>
+                </Center>
+                </Stack>
             </CardBody>
-            <CardFooter>
-            </CardFooter>
         </Card>
     )
 }
