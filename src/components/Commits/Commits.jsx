@@ -4,7 +4,12 @@ import {
     Box,
     Button,
     Center,
+    Text,
+    Flex,
+    Spacer,
+    IconButton,
 } from "@chakra-ui/react";
+import { ArrowBackIcon, ArrowForwardIcon } from '@chakra-ui/icons'
 import CalendarHeatmap from 'react-calendar-heatmap';
 import { testValues, expandedTestValues } from '../../lib/dummyHeatmapData';
 import { getIssues, getCommits } from '../../utils/github';
@@ -73,7 +78,6 @@ const Commits = () => {
         catch (error){
             console.log(error);
         }
-
     }
 
     useEffect(() => {console.log(commits)}, [commits]);
@@ -83,16 +87,19 @@ const Commits = () => {
     return (
         <>
             <Box w="75%" h="100%" mt="5%">
-                {/* <Button onClick={getIssues}>get issues</Button> */}
-                <Center>
-                <Button onClick={handleCommits}>Display My Commits</Button>
-                </Center>
+                <Text fontSize="4xl" fontWeight="bold" color="white">{year}</Text>
                 <CalendarHeatmap
                     startDate={new Date(`${year}-01-01`)}
                     endDate={new Date(`${year}-12-31`)}
                     values={commitValues}
                     classForValue={(value) => colorValue(value)}
                 />
+                <Flex mt="1rem" gap={7}>
+                    <IconButton icon={<ArrowBackIcon />} onClick={() => setYear(year-1)} isDisabled={year <= 2021}/>
+                    <IconButton icon={<ArrowForwardIcon />} onClick={() => setYear(year+1)} isDisabled={year >= 2024} />
+                    <Spacer />
+                    <Button onClick={handleCommits}>Display My Commits</Button>
+                </Flex>
             </Box>
         </>
     );
