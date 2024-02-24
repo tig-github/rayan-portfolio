@@ -8,11 +8,10 @@ import {
     Spacer,
     IconButton,
     Spinner,
-    useBreakpointValue,
 } from "@chakra-ui/react";
 import { ArrowBackIcon, ArrowForwardIcon } from '@chakra-ui/icons'
 import CalendarHeatmap from 'react-calendar-heatmap';
-import { testValues, expandedTestValues } from '../../lib/dummyHeatmapData';
+// import { testValues, expandedTestValues } from '../../lib/dummyHeatmapData'; // used for testing different values
 import { processCommitCounts, processCommitValues, getCommits } from '../../utils/github';
 import 'react-calendar-heatmap/dist/styles.css';
 import './Commits.css';
@@ -51,10 +50,7 @@ const Commits = () => {
             console.log(error);
         }
     }
-
-    // useEffect(() => {console.log(commits)}, [commits]);
-    // useEffect(() => {console.log(commitValues)}, [commitValues]);
-    // useEffect(() => {console.log(handlingCommit)}, [handlingCommit]);
+    
     useEffect(() => {
         if (!didInit) {
             didInit = true;
