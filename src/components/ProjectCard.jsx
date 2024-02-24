@@ -31,7 +31,7 @@ const ProjectCard = ({title, img, tag, date, link, description, icons, isSchool,
             _hover={
                 {
                     transform: "perspective(1200px) rotateX(10deg) rotateY(-10deg) rotateZ(2deg)",
-                    "transition-duration": "1s",
+                    "transitionDuration": "1s",
                 
                 }}
         >
