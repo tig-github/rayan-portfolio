@@ -1,9 +1,7 @@
 import React from "react";
 import { 
   Box, 
-  Text, 
   Center,
-  Heading, 
   Stack, 
   Flex,
   Image,

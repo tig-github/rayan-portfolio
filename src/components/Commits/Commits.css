@@ -1,4 +1,4 @@
 .react-calendar-heatmap .lowcommit { fill: rgb(231, 190, 255); }
-.react-calendar-heatmap .mediumcommit { fill: rgb(220, 160, 255); }
-.react-calendar-heatmap .highcommit { fill: rgb(185, 65, 255); }
-.react-calendar-heatmap .hugecommit { fill: rgb(127, 0, 201);  }
+.react-calendar-heatmap .mediumcommit { fill: rgb(201, 109, 255); }
+.react-calendar-heatmap .highcommit { fill: rgb(163, 3, 255); }
+.react-calendar-heatmap .hugecommit { fill: rgb(77, 0, 122);  }

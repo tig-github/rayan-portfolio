@@ -2,8 +2,9 @@
 import React from 'react';
 import { 
     Box,
-  } from "@chakra-ui/react";
+} from "@chakra-ui/react";
 import CalendarHeatmap from 'react-calendar-heatmap';
+import { testValues, expandedTestValues } from '../../lib/dummyHeatmapData';
 import 'react-calendar-heatmap/dist/styles.css';
 import './Commits.css';
 
@@ -28,21 +29,14 @@ const colorValue = (value) => {
 const Commits = () => {
     return (
         <>
-            <Box w="50%">
+            <Box w="50%" mt="4rem">
                 <CalendarHeatmap
                     startDate={new Date('2016-01-01')}
                     endDate={new Date('2016-04-01')}
-                    values={[
-                        { date: '2016-01-02', count: 12 },
-                        { date: '2016-01-22', count: 122 },
-                        { date: '2016-01-30', count: 38 },
-                        { date: '2016-01-31', count: 1 },
-                        // ...and so on
-                    ]}
+                    values={expandedTestValues}
                     classForValue={(value) => colorValue(value)}
                 />
             </Box>
-
         </>
     );
 }
