@@ -14,6 +14,7 @@ import me from "../images/rayan.jpg";
 import Projects from "./Projects";
 import Skills from "./Skills";
 import Resources from "./Resources";
+import Commits from "../components/Commits";
 
 const Home = () => {
   const imageSize = useBreakpointValue({
@@ -34,6 +35,7 @@ const Home = () => {
             <HomeField />
           </Flex>
         </Flex>
+        <Commits />
         <Skills />
         <Projects />
         <Resources />

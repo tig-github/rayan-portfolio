@@ -30,7 +30,7 @@ const ProjectCard = ({title, img, tag, date, link, description, icons, isSchool,
             borderRadius="7%"
             _hover={
                 {
-                    transform: "perspective(1000px) rotateX(10deg) rotateY(-10deg) rotateZ(2deg)",
+                    transform: "perspective(1200px) rotateX(10deg) rotateY(-10deg) rotateZ(2deg)",
                     "transition-duration": "1s",
                 
                 }}

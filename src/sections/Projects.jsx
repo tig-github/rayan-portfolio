@@ -30,6 +30,7 @@ import {
   ics51Icons,
 } from "../lib/projectData";
 
+
 const Projects = () => {
   const flexDirection = useBreakpointValue(
     {
@@ -96,7 +97,6 @@ const Projects = () => {
               <ProjectCard title={"Abound Food Care"} img={ctcDefaultImage} tag={"CTC"} date={"2022"} link={"https://github.com/ctc-uci/abound-food-care-frontend"} description={OSSItems["Abound Food Care"]} icons={ctcIcons} fadeOpen={fadeOpenOSS}/>
               <ProjectCard title={"Women's Safety Website"} img={ctcDefaultImage}  tag={"CTC"} date={"2022"} link={"https://github.com/ctc-uci/bp-women-safety"} description={OSSItems["Women's Safety Website"]} icons={[<FaReact size={40} color="white"/>]} fadeOpen={fadeOpenOSS}/>
             </>
-
             <>
               <ProjectCard title={"CS 117 Teapot Model"} img={personalImage} tag={"School"} date={"2023"} description={courseItems.teapot} icons={cs117Icons} isSchool fadeOpen={fadeOpenSchool}/>
               <ProjectCard title={"CS 121 Search Engine"} img={personalImage} tag={"School"} date={"2022"} description={courseItems["CS 121 Search Engine"]} icons={cs121Icons} isSchool fadeOpen={fadeOpenSchool}/>
