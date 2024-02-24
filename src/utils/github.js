@@ -30,3 +30,30 @@ export const getCommits = async () => {
     });
     return commitData;
 }
+
+// creates dict of form {date: count} then reprocesses into format of [...{date: date, count: count}]
+export const processCommitCounts = (commits) => {
+  let counts = {};
+  console.log(commits)
+  commits.forEach(
+      (commit) => {
+          let commitDate = (commit['commit']['author']['date']).slice(0,10);
+          if (commitDate in counts) {
+              counts[commitDate]++;
+          }
+          else {
+              counts[commitDate] = 1;
+          }
+      }
+  )
+  console.log(counts);
+  return counts;
+}
+// turns the count dict into an array of individual values
+export const processCommitValues = (counts) => {
+    let vals = [];
+    Object.keys(counts).map((commitDate) => {
+        vals.push({date: commitDate, count: counts[commitDate]});
+    })
+    return vals;
+}

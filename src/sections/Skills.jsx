@@ -60,7 +60,7 @@ const Skills = () => {
           "cat4 icon4"
           `,
         },
-      )
+      );
     const flexAlignment = useBreakpointValue(
     {
         base: 'center',
@@ -69,7 +69,7 @@ const Skills = () => {
     {
         fallback: 'center',
     },
-    )
+    );
     const flexMargin = useBreakpointValue(
         {
             base: 0,
@@ -78,7 +78,7 @@ const Skills = () => {
         {
             fallback: "25%"
         }
-    )
+    );
     return (
         <Box bg="#2C1B47" w="100%" h="100%" id="skills">
             <Stack align="center" gap="3rem" mb="5%" mt={{base: "1%", md: "3%"}}>
