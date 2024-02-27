@@ -20,9 +20,9 @@ export const getIssues = async () => {
 }
 
 // gets commits from github user tig-github
-export const getCommits = async () => {
-    const octokit = new Octokit({ auth: process.env.REACT_APP_GITHUB_TOKEN });
-    const query_string = 'q=' + encodeURIComponent('author:tig-github');
+export const getCommits = async (year) => {
+    const octokit = new Octokit();
+    const query_string = 'q=' + encodeURIComponent(`author:tig-github author-date:${year}-01-01..${year}-12-31`);
     const commitData = await octokit.paginate(`GET /search/commits?${query_string}`, {
         headers: {
           'X-GitHub-Api-Version': '2022-11-28'        
@@ -49,6 +49,7 @@ export const processCommitCounts = (commits) => {
   console.log(counts);
   return counts;
 }
+
 // turns the count dict into an array of individual values
 export const processCommitValues = (counts) => {
     let vals = [];

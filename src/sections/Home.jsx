@@ -33,9 +33,9 @@ const Home = () => {
             <HomeField />
           </Flex>
         </Flex>
-        <Center>
+        {/* <Center>
           <Commits />
-        </Center>
+        </Center> */}
         <Skills />
         <Projects />
         <Resources />

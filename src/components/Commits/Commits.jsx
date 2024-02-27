@@ -1,5 +1,5 @@
 // to display github commit heapmap on the main page
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo, useRef } from 'react';
 import { 
     Box,
     Button,
@@ -35,6 +35,8 @@ const colorValue = (value) => { // simple function returning color class for com
 
 const Commits = () => {
     const [year, setYear] = useState(2024);
+    const yearRef = useRef(2024);
+    const [freeze, setFreeze] = useState(false);
     const [commits, setCommits] = useState([]);
     const [handlingCommit, setHandlingCommit] = useState(false);
     const commitValues = useMemo(() => processCommitValues(processCommitCounts(commits)), [commits]);
@@ -42,12 +44,22 @@ const Commits = () => {
     const handleCommits = async () => {
         try {
             setHandlingCommit(true);
-            const retrieved_commits = await getCommits();
+            const retrieved_commits = await getCommits(yearRef.current);
             setCommits([...retrieved_commits]);
             setHandlingCommit(false);
         }
         catch (error){
             console.log(error);
+            alert('caught')
+        }
+    }
+
+    // due to github pages not hiding env and no-auth limits, pagination requires new calls each time - luckily its also faster
+    const handleClick = (newYear) => {
+        yearRef.current = newYear;
+        setYear(newYear);
+        if (!freeze) {
+            handleCommits();
         }
     }
     
@@ -69,11 +81,14 @@ const Commits = () => {
                     classForValue={(value) => colorValue(value)}
                 />
                 <Flex mt="1rem" gap={7}>
-                    <IconButton icon={<ArrowBackIcon />} onClick={() => setYear(year-1)} isDisabled={year <= 2021}/>
-                    <IconButton icon={<ArrowForwardIcon />} onClick={() => setYear(year+1)} isDisabled={year >= 2024} />
+                    <IconButton icon={<ArrowBackIcon />} onClick={() => handleClick(year-1)} isDisabled={year <= 2021}/>
+                    <IconButton icon={<ArrowForwardIcon />} onClick={() => handleClick(year+1)} isDisabled={year >= 2024} />
                     <Spacer />
                     {handlingCommit && <Spinner color="white" mt={2} />}
-                    <Button onClick={handleCommits}>Display My Commits</Button>
+                    { freeze ? <Button onClick={() => setFreeze(false)}>Unfreeze Heatmap</Button> 
+                                : 
+                                <Button onClick={() => setFreeze(true)}>Freeze Heatmap</Button>
+                    }
                 </Flex>
             </Box>
         </>
