@@ -56,7 +56,7 @@ const Projects = () => {
 
   return (
     <Box bg="#2C1B47" w="100%" h="100%"  minH="calc(100vh)" id="projects">
-      <Stack align="center" spacing={10} mt={{base: "30%", md: "10%"}} >
+      <Stack align="center" spacing={10} mt={{base: "30%", sm: "20%", md: "10%"}} >
         <Heading sz="md" mb="4rem">
           <Text color="white">Projects</Text>
         </Heading>

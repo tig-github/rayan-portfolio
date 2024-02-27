@@ -29,8 +29,8 @@ const Resources = () => {
   return (
     <>
       <Box bg="#2C1B47" w="100%" h="100%" id="resources">
-        <Stack align="center" spacing={10}>
-          <Heading as="h1" mt={{base: "30%", md: "3%"}} mb="4rem">
+        <Stack align="center" spacing={10} mt={{base: "30%", sm: "20%", md: "10%"}}>
+          <Heading as="h1" mb="4rem">
             <Text color="white">Resources</Text>
           </Heading>
           <Box bg="#DCCAE9" px="1rem" ml=".5rem" mb="2rem" w="60%" borderRadius="1rem">

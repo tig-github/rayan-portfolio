@@ -15,7 +15,7 @@ const Navbar = () => {
           style = {{scrollbarWidth: "none"}}
           sx={
               { 
-              '::-webkit-scrollbar':{display:'none'}
+              '::-webkit-scrollbar': {display:'none'}
               }
           }
         >
@@ -35,11 +35,6 @@ const Navbar = () => {
                 Projects
               </Button>
             </HashLink>
-            {/* <HashLink smooth to="/#courses">
-              <Button colorScheme="blackAlpha" size="lg">
-                Courses
-              </Button>
-            </HashLink> */}
             <HashLink smooth to="/#resources">
               <Button colorScheme="blackAlpha" size="lg">
                 Resources

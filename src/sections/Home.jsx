@@ -27,7 +27,7 @@ const Home = () => {
   return (
     <Box bg="#2C1B47" maxH="100%" minH="calc(100vh)" w="100%">
       <Stack spacing={10}>
-        <Flex justify="center" flexWrap="wrap" mt={{base: "30%", md: "10%"}}>
+        <Flex justify="center" flexWrap="wrap" mt={{base: "30%", sm: "20%", md: "10%"}}>
           <Image src={me} boxSize="30%" minW="20rem" borderRadius="full" mr={imageSize} mb={3}/>
           <Flex justify="center" direction="column" width="55%">
             <HomeField />
