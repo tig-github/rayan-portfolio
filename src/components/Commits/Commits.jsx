@@ -12,7 +12,8 @@ import {
 import { ArrowBackIcon, ArrowForwardIcon } from '@chakra-ui/icons'
 import CalendarHeatmap from 'react-calendar-heatmap';
 // import { testValues, expandedTestValues } from '../../lib/dummyHeatmapData'; // used for testing different values
-import { processCommitCounts, processCommitValues, getCommits } from '../../utils/github';
+import { heatmapValuesPre2024 } from '../../lib/commitHeatmapCache';
+import { processCommitCounts, processCommitValues, getCommits, getPriorCommits } from '../../utils/github';
 import 'react-calendar-heatmap/dist/styles.css';
 import './Commits.css';
 
@@ -34,12 +35,11 @@ const colorValue = (value) => { // simple function returning color class for com
 }
 
 const Commits = () => {
-    const [year, setYear] = useState(2024);
-    const yearRef = useRef(2024);
-    const [freeze, setFreeze] = useState(false);
+    const [year, setYear] = useState(2023);
+    const yearRef = useRef(2023);
     const [commits, setCommits] = useState([]);
     const [handlingCommit, setHandlingCommit] = useState(false);
-    const commitValues = useMemo(() => processCommitValues(processCommitCounts(commits)), [commits]);
+    const commitValues = useMemo(() => [...heatmapValuesPre2024, ...processCommitValues(processCommitCounts(commits))], [commits]);
 
     const handleCommits = async () => {
         try {
@@ -58,10 +58,12 @@ const Commits = () => {
     const handleClick = (newYear) => {
         yearRef.current = newYear;
         setYear(newYear);
-        if (!freeze) {
-            handleCommits();
-        }
     }
+
+    // const getOldCommits = async () => {
+    //     const ogcommits = await getPriorCommits();
+    //     console.log(processCommitValues(processCommitCounts(ogcommits)));
+    // }
     
     useEffect(() => {
         if (!didInit) {
@@ -85,10 +87,6 @@ const Commits = () => {
                     <IconButton icon={<ArrowForwardIcon />} onClick={() => handleClick(year+1)} isDisabled={year >= 2024} />
                     <Spacer />
                     {handlingCommit && <Spinner color="white" mt={2} />}
-                    { freeze ? <Button onClick={() => setFreeze(false)}>Unfreeze Heatmap</Button> 
-                                : 
-                                <Button onClick={() => setFreeze(true)}>Freeze Heatmap</Button>
-                    }
                 </Flex>
             </Box>
         </>
