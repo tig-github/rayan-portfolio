@@ -13,6 +13,7 @@ import Projects from "./Projects";
 import Skills from "./Skills";
 import Resources from "./Resources";
 import Commits from "../components/Commits/Commits";
+import Footer from "../components/Footer";
 
 const Home = () => {
   const imageSize = useBreakpointValue({
@@ -39,7 +40,7 @@ const Home = () => {
         <Skills />
         <Projects />
         <Resources />
-        <Box />
+        <Footer />
       </Stack>
     </Box>
   );
