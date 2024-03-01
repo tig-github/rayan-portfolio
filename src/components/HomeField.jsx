@@ -34,8 +34,7 @@ const HomeField = () => {
                 query a startup's database using natural language.
               </Text>
               <Text>
-                Feel free to check out all the projects I've worked on in the Projects section,
-                and the coursework I have taken in the Coursework section. Projects include personal projects,
+                Feel free to check out all the projects I've worked on in the Projects section. Projects include personal projects,
                 school projects, and open source contributions.
               </Text>
               <Text>

@@ -75,7 +75,7 @@ const Commits = () => {
     return (
         <>
             <Box w="75%" mt="5%">
-                <Text fontSize="4xl" fontWeight="bold" color="white">{year}</Text>
+                <Text fontSize="4xl" fontWeight="bold" color="white">{year} Commits</Text>
                 <CalendarHeatmap
                     startDate={new Date(`${year}-01-01`)}
                     endDate={new Date(`${year}-12-31`)}
