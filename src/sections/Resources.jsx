@@ -29,7 +29,7 @@ const Resources = () => {
   return (
     <>
       <Box bg="#2C1B47" w="100%" h="100%" id="resources">
-        <Stack align="center" spacing={10} mt={{base: "30%", sm: "20%", md: "10%"}}>
+        <Stack align="center" spacing={10} mt={{base: "30%", sm: "20%", md: "10%"}} mb="5rem">
           <Heading as="h1" mb="4rem">
             <Text color="white">Resources</Text>
           </Heading>
