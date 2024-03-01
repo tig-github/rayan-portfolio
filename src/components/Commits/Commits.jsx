@@ -35,8 +35,8 @@ const colorValue = (value) => { // simple function returning color class for com
 }
 
 const Commits = () => {
-    const [year, setYear] = useState(2024);
-    const yearRef = useRef(2024);
+    const [year, setYear] = useState(2023);
+    const yearRef = useRef(2023);
     const [commits, setCommits] = useState([]);
     const [handlingCommit, setHandlingCommit] = useState(false);
     const commitValues = useMemo(() => [...heatmapValuesPre2024, ...processCommitValues(processCommitCounts(commits))], [commits]);
