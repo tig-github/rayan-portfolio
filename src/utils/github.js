@@ -3,11 +3,9 @@
 */
 import { Octokit } from "octokit";
 
-
-
 /* 
-gets commits from github user tig-github from 2024
-sends an unauthenticated request meant to run on deployment
+    gets commits from github user tig-github from 2024
+    sends an unauthenticated request meant to run on deployment
 */
 export const getCommits = async () => {
     const octokit = new Octokit();
@@ -21,8 +19,8 @@ export const getCommits = async () => {
 }
 
 /* 
-gets commits from 2021-2023 and saves them to JSON
-sends an authenticated request meant only to run for processing prior to deployment
+    gets commits from 2021-2023 and saves them to JSON
+    sends an authenticated request meant only to run for processing prior to deployment
 */
 export const getPriorCommits = async () => {
     const octokit = new Octokit({ auth: process.env.REACT_APP_GITHUB_TOKEN });

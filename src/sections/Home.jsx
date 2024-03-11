@@ -30,7 +30,7 @@ const Home = () => {
       <Stack spacing={10}>
         <Flex justify="center" flexWrap="wrap" mt={{base: "30%", sm: "20%", md: "10%"}}>
           <Image src={me} boxSize="30%" minW="20rem" borderRadius="full" mr={imageSize} mb={3}/>
-          <Center width="55%">
+          <Center width="55%" mt="5rem">
             <HomeField />
           </Center>
         </Flex>

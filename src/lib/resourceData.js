@@ -13,10 +13,10 @@ export const jsResourceLinks = {
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide",
     "Javascript ES6 W3Schools":
     "https://www.w3schools.com/js/js_es6.asp",
-    "Eloquent Javascript":
-    "https://eloquentjavascript.net/",
     "You don't know Javascript":
     "https://github.com/specter01wj/Book-you_dont_know_js",
+    "Everyone has Javascript":
+    "https://www.kryogenix.org/code/browser/everyonehasjs.html",
   }
 export const reactResourceLinks = {
     "Thinking in React":

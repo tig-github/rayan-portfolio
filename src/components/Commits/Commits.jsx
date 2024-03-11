@@ -11,7 +11,6 @@ import {
 } from "@chakra-ui/react";
 import { ArrowBackIcon, ArrowForwardIcon } from '@chakra-ui/icons'
 import CalendarHeatmap from 'react-calendar-heatmap';
-// import { testValues, expandedTestValues } from '../../lib/dummyHeatmapData'; // used for testing different values
 import { heatmapValuesPre2024 } from '../../lib/commitHeatmapCache';
 import { processCommitCounts, processCommitValues, getCommits, getPriorCommits } from '../../utils/github';
 import 'react-calendar-heatmap/dist/styles.css';
@@ -50,7 +49,6 @@ const Commits = () => {
         }
         catch (error){
             console.log(error);
-            alert('caught')
         }
     }
 

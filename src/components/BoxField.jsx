@@ -10,7 +10,6 @@ import {
   Text,
   Image,
   Flex,
-  Spacer,
   Heading,
 } from "@chakra-ui/react";
 import ListField from "./ListField";
