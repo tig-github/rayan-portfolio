@@ -8,16 +8,14 @@ const Navbar = () => {
   return (
     <>
       <Box bg="#281b3d" w="100%" p={4} position="fixed" zIndex="sticky">
-        <Flex 
-          align="left" 
-          overflowX="scroll" 
-          overflowY="hidden" 
-          style = {{scrollbarWidth: "none"}}
-          sx={
-              { 
-              '::-webkit-scrollbar': {display:'none'}
-              }
-          }
+        <Flex
+          align="left"
+          overflowX="scroll"
+          overflowY="hidden"
+          style={{ scrollbarWidth: "none" }}
+          sx={{
+            "::-webkit-scrollbar": { display: "none" },
+          }}
         >
           <ButtonGroup gap={3}>
             <HashLink smooth to="/#">
@@ -29,6 +27,11 @@ const Navbar = () => {
               <Button colorScheme="blackAlpha" size="lg">
                 Skills
               </Button>
+            </HashLink>
+            <HashLink smooth to="/#experience">
+              <Button colorScheme="blackAlpha" size="lg">
+                Experience
+              </Button>{" "}
             </HashLink>
             <HashLink smooth to="/#projects">
               <Button colorScheme="blackAlpha" size="lg">
@@ -42,12 +45,17 @@ const Navbar = () => {
             </HashLink>
           </ButtonGroup>
           <Spacer />
-          <Link href="https://www.linkedin.com/in/rayantig/" isExternal mr={3} ml={6}>
-              <FaLinkedin size={40} color="#0072b1"/>
+          <Link
+            href="https://www.linkedin.com/in/rayantig/"
+            isExternal
+            mr={3}
+            ml={6}
+          >
+            <FaLinkedin size={40} color="#0072b1" />
           </Link>
           <Link href="https://github.com/tig-github" isExternal>
             <Box bg="white" borderRadius="full">
-              <AiFillGithub size={40}/>
+              <AiFillGithub size={40} />
             </Box>
           </Link>
         </Flex>
