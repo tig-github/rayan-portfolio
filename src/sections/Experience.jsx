@@ -26,7 +26,12 @@ const Experience = () => {
           <VerticalTimeline>
             <VerticalTimelineElement
               className="vertical-timeline-element--work"
-              contentStyle={{ background: "black", color: "white" }}
+              contentStyle={{
+                background: "black",
+                color: "white",
+                boxShadow: "none",
+                paddingBottom: "2rem",
+              }}
               contentArrowStyle={{
                 borderRight: "7px solid black",
               }}
@@ -43,7 +48,12 @@ const Experience = () => {
             </VerticalTimelineElement>
             <VerticalTimelineElement
               className="vertical-timeline-element--work"
-              contentStyle={{ background: "white", color: "#780be6" }}
+              contentStyle={{
+                background: "white",
+                color: "#780be6",
+                boxShadow: "none",
+                paddingBottom: "2rem",
+              }}
               contentArrowStyle={{
                 borderRight: "7px solid white",
               }}
@@ -64,7 +74,12 @@ const Experience = () => {
             </VerticalTimelineElement>
             <VerticalTimelineElement
               className="vertical-timeline-element--work"
-              contentStyle={{ background: "#617dfa", color: "white" }}
+              contentStyle={{
+                background: "#617dfa",
+                color: "white",
+                boxShadow: "none",
+                paddingBottom: "2rem",
+              }}
               contentArrowStyle={{
                 borderRight: "7px solid #617dfa",
               }}
