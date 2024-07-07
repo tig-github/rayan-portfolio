@@ -7,7 +7,8 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import { FaReact } from "react-icons/fa";
 import ctcIcon from "../images/CTC.svg";
-//import CtcIcon from "../components/Icons/ctcIcon";
+import uciIcon from "../images/uci2.svg";
+import cdzIcon from "../images/cdz.svg";
 
 const Experience = () => {
   return (
@@ -23,6 +24,23 @@ const Experience = () => {
             <Text color="white">Experience</Text>
           </Heading>
           <VerticalTimeline>
+            <VerticalTimelineElement
+              className="vertical-timeline-element--work"
+              contentStyle={{ background: "black", color: "white" }}
+              contentArrowStyle={{
+                borderRight: "7px solid black",
+              }}
+              date="June 2024 - Present"
+              icon={<Image src={cdzIcon} borderRadius="full" />}
+            >
+              <h3 className="vertical-timeline-element-title">
+                Associate Full Stack Engineer
+              </h3>
+              <h4 className="vertical-timeline-element-subtitle">Codazen</h4>
+              <Text>
+                Associate Full Stack Engineer at Codazen, on assignment at Meta.
+              </Text>
+            </VerticalTimelineElement>
             <VerticalTimelineElement
               className="vertical-timeline-element--work"
               contentStyle={{ background: "white", color: "#780be6" }}
@@ -42,6 +60,26 @@ const Experience = () => {
                 Developer in student organization creating open source software
                 for local nonprofits utilizing common industry standards, with
                 contributions to several projects.
+              </Text>
+            </VerticalTimelineElement>
+            <VerticalTimelineElement
+              className="vertical-timeline-element--work"
+              contentStyle={{ background: "#617dfa", color: "white" }}
+              contentArrowStyle={{
+                borderRight: "7px solid #617dfa",
+              }}
+              date="March 2022 - December 2022"
+              icon={<Image src={uciIcon} borderRadius="full" />}
+            >
+              <h3 className="vertical-timeline-element-title">
+                Learning Assistant, Grader
+              </h3>
+              <h4 className="vertical-timeline-element-subtitle">
+                UC Irvine Donald Bren School
+              </h4>
+              <Text>
+                Learning Assistant for the course Boolean Logic and Discrete
+                Structures for a quarter, then a grader for the same course.
               </Text>
             </VerticalTimelineElement>
           </VerticalTimeline>
