@@ -23,15 +23,15 @@ const Navbar = () => {
                 Home
               </Button>
             </HashLink>
-            <HashLink smooth to="/#skills">
-              <Button colorScheme="blackAlpha" size="lg">
-                Skills
-              </Button>
-            </HashLink>
             <HashLink smooth to="/#experience">
               <Button colorScheme="blackAlpha" size="lg">
                 Experience
               </Button>{" "}
+            </HashLink>
+            <HashLink smooth to="/#skills">
+              <Button colorScheme="blackAlpha" size="lg">
+                Skills
+              </Button>
             </HashLink>
             <HashLink smooth to="/#projects">
               <Button colorScheme="blackAlpha" size="lg">

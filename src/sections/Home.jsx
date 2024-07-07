@@ -50,8 +50,8 @@ const Home = () => {
         <Center>
           <Commits />
         </Center>
-        <Skills />
         <Experience />
+        <Skills />
         <Projects />
         <Resources />
         <Footer />
