@@ -43,7 +43,7 @@ const Home = () => {
             mr={imageSize}
             mb={3}
           />
-          <Center width="55%" mt="5rem">
+          <Center width="55%" mt="1rem">
             <HomeField />
           </Center>
         </Flex>
